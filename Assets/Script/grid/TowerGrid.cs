@@ -65,9 +65,12 @@ public class TowerGrid : MonoBehaviour
             {
                 if (testArray.GetValueAt(tile[1], tile[0]) == "0")
                 {
-                    if (GlobalVariables.playerMoney >= 1)
+                    int towerIndex = towerMapping[selectedTowerIndex];
+                    int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
+
+                    if (GlobalVariables.playerMoney >= towerCost)
                     {
-                        GlobalVariables.playerMoney -= 1;
+                        GlobalVariables.playerMoney -= towerCost;
 
                         // Change the cell value based on selected tower
                         testArray.ChangeAt(tile[1], tile[0], selectedTowerIndex);
