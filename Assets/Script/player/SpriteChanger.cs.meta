@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b3991ad3606f5024e8ead42839ba951f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spriteRenderer: {instanceID: 0}
+  - idleSprite: {fileID: 21300000, guid: 3a4d920a1f2cb6d419d12bdb6fc0b2d1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

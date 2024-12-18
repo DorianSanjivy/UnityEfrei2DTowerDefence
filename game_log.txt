@@ -1,0 +1,193 @@
+2024-12-18 15:16:41 [Log] 
+
+2024-12-18 15:16:41 [Exception] IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack Trace: TowerGrid.InstantiateTower (System.Int32 tileX, System.Int32 tileY) (at Assets/Script/grid/TowerGrid.cs:111)
+TowerGrid.Start () (at Assets/Script/grid/TowerGrid.cs:40)
+
+2024-12-18 15:16:47 [Exception] IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack Trace: TowerGrid.InstantiateTower (System.Int32 tileX, System.Int32 tileY) (at Assets/Script/grid/TowerGrid.cs:111)
+TowerGrid.Update () (at Assets/Script/grid/TowerGrid.cs:62)
+
+2024-12-18 15:16:54 [Log] 
+
+2024-12-18 15:16:55 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:16:55 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:16:55 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:16:55 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:16:55 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:16:55 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:16:55 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:16:55 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:16:55 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:16:56 [Log] CochonALT(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:16:56 [Log] ralentitCochonALT(Clone) (Animal)
+2024-12-18 15:16:58 [Log] PouletALT(Clone) est ralenti � 1,2 speed :3
+2024-12-18 15:16:58 [Log] ralentitPouletALT(Clone) (Animal)
+2024-12-18 15:16:58 [Log] hp :PouletALT(Clone) (Animal)
+2024-12-18 15:16:58 [Log] hp :CochonALT(Clone) (Animal)
+2024-12-18 15:17:00 [Log] CochonALT(Clone) (Animal)took dmg
+2024-12-18 15:17:00 [Log] PouletALT(Clone) (Animal)took dmg
+2024-12-18 15:17:00 [Log] Poulet(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:00 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-18 15:17:01 [Log] hp :Poulet(Clone) (Animal)
+2024-12-18 15:17:02 [Log] Poulet(Clone) (Animal)took dmg
+2024-12-18 15:17:02 [Log] Poulet(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:02 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-18 15:17:03 [Log] hp :Poulet(Clone) (Animal)
+2024-12-18 15:17:04 [Log] Poulet(Clone) (Animal)took dmg
+2024-12-18 15:17:04 [Log] Cochon(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:17:04 [Log] ralentitCochon(Clone) (Animal)
+2024-12-18 15:17:06 [Log] hp :Cochon(Clone) (Animal)
+2024-12-18 15:17:06 [Log] Cochon(Clone) (Animal)took dmg
+2024-12-18 15:17:06 [Log] Multipiou(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:06 [Log] ralentitMultipiou(Clone) (Animal)
+2024-12-18 15:17:06 [Log] hp :Multipiou(Clone) (Animal)
+2024-12-18 15:17:08 [Log] Multipiou(Clone) (Animal)took dmg
+2024-12-18 15:17:08 [Log] Multipiou(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:08 [Log] ralentitMultipiou(Clone) (Animal)
+2024-12-18 15:17:08 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:08 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:08 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:08 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:08 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:08 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:08 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:08 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:08 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:08 [Log] hp :Multipiou(Clone) (Animal)
+2024-12-18 15:17:09 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:09 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:09 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:09 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:09 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:09 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:09 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:09 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:09 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:10 [Log] Multipiou(Clone) (Animal)took dmg
+2024-12-18 15:17:10 [Log] Multipiou(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:10 [Log] ralentitMultipiou(Clone) (Animal)
+2024-12-18 15:17:10 [Log] hp :Multipiou(Clone) (Animal)
+2024-12-18 15:17:11 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:11 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:11 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:11 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:11 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:11 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:11 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:11 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:11 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:12 [Log] Multipiou(Clone) (Animal)took dmg
+2024-12-18 15:17:12 [Log] Multipiou(Clone) est ralenti � 0,6 speed :1,5
+2024-12-18 15:17:12 [Log] ralentitMultipiou(Clone) (Animal)
+2024-12-18 15:17:12 [Log] hp :Multipiou(Clone) (Animal)
+2024-12-18 15:17:17 [Log] 
+
+2024-12-18 15:17:17 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:17 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:17 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:17 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:17 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:17 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:17 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:17 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:17 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:18 [Log] CochonALT(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:17:18 [Log] ralentitCochonALT(Clone) (Animal)
+2024-12-18 15:17:18 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:18 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:18 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:18 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:18 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:18 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:18 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:18 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:18 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:18 [Warning] No tower to destroy at X=12, Y=7
+2024-12-18 15:17:19 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:19 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:19 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:19 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:19 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:19 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:19 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:19 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:19 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:19 [Warning] No tower to destroy at X=12, Y=6
+2024-12-18 15:17:20 [Log] Cochon(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:17:20 [Log] ralentitCochon(Clone) (Animal)
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:21 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:21 [Log] hp :CochonALT(Clone) (Animal)
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:21 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:21 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:21 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:21 [Warning] No tower to destroy at X=12, Y=6
+2024-12-18 15:17:22 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:22 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:22 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:22 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:22 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:22 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	Zone	Road	0	0	
+2024-12-18 15:17:22 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:22 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:22 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:22 [Warning] No tower to destroy at X=12, Y=6
+2024-12-18 15:17:22 [Log] hp :Cochon(Clone) (Animal)
+2024-12-18 15:17:22 [Log] Cochon(Clone) (Animal)took dmg
+2024-12-18 15:17:22 [Log] CochonALT(Clone) (Animal)took dmg
+2024-12-18 15:17:22 [Log] Cochon(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:17:22 [Log] ralentitCochon(Clone) (Animal)
+2024-12-18 15:17:23 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:23 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:23 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:23 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:23 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:23 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:23 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:23 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:23 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	Slow	
+2024-12-18 15:17:24 [Log] Cochon(Clone) est ralenti � 0,2 speed :0,5
+2024-12-18 15:17:24 [Log] ralentitCochon(Clone) (Animal)
+2024-12-18 15:17:25 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:25 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:25 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-18 15:17:25 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-18 15:17:25 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:25 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-18 15:17:25 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	0	Road	Road	Road	
+2024-12-18 15:17:25 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-18 15:17:25 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-18 15:17:26 [Log] Cochon(Clone) retrouve sa vitesse normale.
+2024-12-18 15:17:28 [Log] Cochon(Clone) retrouve sa vitesse normale.
+2024-12-18 15:17:49 [Log] detected
+2024-12-18 15:17:49 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:17:51 [Log] detected
+2024-12-18 15:17:51 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:17:51 [Log] detected
+2024-12-18 15:17:51 [Log] Trigger d�tect� avec : Multipiou(Clone)
+2024-12-18 15:17:57 [Log] detected
+2024-12-18 15:17:57 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:17:59 [Log] detected
+2024-12-18 15:17:59 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:18:01 [Log] detected
+2024-12-18 15:18:01 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:18:01 [Log] detected
+2024-12-18 15:18:01 [Log] Trigger d�tect� avec : Multipiou(Clone)
+2024-12-18 15:18:03 [Log] detected
+2024-12-18 15:18:03 [Log] Trigger d�tect� avec : PouletALT(Clone)
+2024-12-18 15:18:09 [Log] detected
+2024-12-18 15:18:09 [Log] Trigger d�tect� avec : PouletALT(Clone)
