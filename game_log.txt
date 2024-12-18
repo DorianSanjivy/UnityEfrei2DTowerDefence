@@ -244,3 +244,10 @@ TowerGrid.Update () (at Assets/Script/grid/TowerGrid.cs:62)
 2024-12-18 15:45:00 [Log] ralentitPoulet(Clone) (Animal)
 2024-12-18 15:45:11 [Log] 
 
+2024-12-18 16:05:26 [Log] 
+
+2024-12-18 16:05:27 [Log] Début de la vague 1
+2024-12-18 16:06:58 [Log] Vague 1 terminée !
+2024-12-18 16:07:03 [Log] Début de la vague 2
+2024-12-18 16:08:59 [Log] Vague 2 terminée !
+2024-12-18 16:09:04 [Log] Début de la vague 3
