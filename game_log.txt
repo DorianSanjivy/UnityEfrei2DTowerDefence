@@ -1,1 +1,8 @@
 
+2024-12-18 16:05:26 [Log] 
+
+2024-12-18 16:05:27 [Log] Début de la vague 1
+2024-12-18 16:06:58 [Log] Vague 1 terminée !
+2024-12-18 16:07:03 [Log] Début de la vague 2
+2024-12-18 16:08:59 [Log] Vague 2 terminée !
+2024-12-18 16:09:04 [Log] Début de la vague 3

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7334163f739524cad32f1e7e8f7340, type: 3}
+  m_Name: Wave1
+  m_EditorClassIdentifier: 
+  waveSteps:
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+    spawnInterval: 10
+  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+    spawnInterval: 7
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
+    spawnInterval: 9
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 6
+  - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
+    spawnInterval: 1
+  - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
+    spawnInterval: 6
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+    spawnInterval: 6
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4

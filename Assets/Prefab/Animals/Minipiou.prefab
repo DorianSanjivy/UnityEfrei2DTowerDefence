@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3589313075098156645}
   - component: {fileID: 4031535242598907176}
   m_Layer: 0
-  m_Name: Cochon
+  m_Name: Minipiou
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,8 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSprites:
-  - {fileID: 21300000, guid: 8b44edaa74ae7404fb80de4e2195458e, type: 3}
-  - {fileID: 21300000, guid: db6bb3b16efad354086e33c09f202d68, type: 3}
+  - {fileID: 21300000, guid: 09ff936698b90c4498229cc232935c31, type: 3}
+  - {fileID: 21300000, guid: 155bde23dc6499b4c8b2687f3fa0ad27, type: 3}
+  - {fileID: 21300000, guid: dbe9ca38782aba64181a7d294610b78b, type: 3}
+  - {fileID: 21300000, guid: 0020495d4662831428d5251648b6a00a, type: 3}
   animationSpeed: 0.2
 --- !u!61 &3589313075098156645
 BoxCollider2D:
