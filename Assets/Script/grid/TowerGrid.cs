@@ -19,6 +19,8 @@ public class TowerGrid : MonoBehaviour
         { "MaxHP", 4 }
     };
 
+    private string selectedTowerIndex = "Wind"; // Currently selected tower type (default: Wind)
+
     void Start()
     {
         // Initialize the grid
@@ -48,6 +50,14 @@ public class TowerGrid : MonoBehaviour
 
     void Update()
     {
+
+        // Check for tower selection keys (1 to 5)
+        if (Input.GetKeyDown(KeyCode.Alpha1)) selectedTowerIndex = "Wind"; // Wind Tower
+        if (Input.GetKeyDown(KeyCode.Alpha2)) selectedTowerIndex = "Slow"; // Slow Tower
+        if (Input.GetKeyDown(KeyCode.Alpha3)) selectedTowerIndex = "Zone"; // Zone Tower
+        if (Input.GetKeyDown(KeyCode.Alpha4)) selectedTowerIndex = "Big"; // Big Tower
+        if (Input.GetKeyDown(KeyCode.Alpha5)) selectedTowerIndex = "MaxHP"; // MaxHP Tower
+
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
             int[] tile = GetTileFromMousePosition();
@@ -58,7 +68,10 @@ public class TowerGrid : MonoBehaviour
                     if (GlobalVariables.playerMoney >= 1)
                     {
                         GlobalVariables.playerMoney -= 1;
-                        testArray.ChangeAt(tile[1], tile[0], "Wind"); // Example: Wind tower
+
+                        // Change the cell value based on selected tower
+                        testArray.ChangeAt(tile[1], tile[0], selectedTowerIndex);
+                        testArray.ToString2DDebugLog();
                         InstantiateTower(tile[0], tile[1]);
                     }
                 }
