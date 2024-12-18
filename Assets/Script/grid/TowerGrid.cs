@@ -38,10 +38,10 @@ public class TowerGrid : MonoBehaviour
         // Example initial placement
         testArray.ChangeAt(3, 6, "Wind");
         InstantiateTower(6, 3);
-        testArray.ChangeAt(8, 15, "Slow");
-        InstantiateTower(15, 8);
-        testArray.ChangeAt(5, 12, "Zone");
-        InstantiateTower(12, 5);
+        testArray.ChangeAt(6, 12, "Slow");
+        InstantiateTower(12, 6);
+        testArray.ChangeAt(5, 0, "Zone");
+        InstantiateTower(0, 5);
 
         testArray.ToString2DDebugLog();
     }
