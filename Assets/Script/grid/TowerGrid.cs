@@ -9,6 +9,8 @@ public class TowerGrid : MonoBehaviour
     private int rows = 9;  // Number of rows
     private int cols = 16; // Number of columns
 
+    private bool isPaused = false; // Tracks if the game is paused
+
     private Dictionary<Vector2Int, GameObject> placedTowers = new Dictionary<Vector2Int, GameObject>(); // Track placed towers
     private Dictionary<string, int> towerMapping = new Dictionary<string, int>
     {
@@ -89,6 +91,22 @@ public class TowerGrid : MonoBehaviour
                 DestroyTower(tile[0], tile[1]);
                 testArray.ChangeAt(tile[1], tile[0], "0");
                 testArray.ToString2DDebugLog();
+            }
+        }
+
+        // Check if "P" key is pressed
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            // Toggle between paused and unpaused
+            if (isPaused)
+            {
+                Time.timeScale = 1;
+                isPaused = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                isPaused = true;
             }
         }
     }
