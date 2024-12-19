@@ -291,7 +291,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.4
 --- !u!114 &4343476843675598669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7830741127320074828, guid: fa649a338289a854cb318cdb8ee66c58, type: 3}
   firePoint: {fileID: 4324835069018060558}
-  fireRate: 1
+  fireRate: 2
   burstDelay: 0.2
 --- !u!114 &206528427170456695
 MonoBehaviour:
@@ -320,5 +320,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
-  damage: 0
+  cost: 40
+  damage: 3

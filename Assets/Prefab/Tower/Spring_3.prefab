@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6117249329766582178, guid: 4d8eac0618a5d50419fdf2f6ae68c1f2, type: 3}
-  fireRate: 1
+  fireRate: 2.5
   firePoint: {fileID: 8898470460592120181}
   rotationSpeed: 5
 --- !u!114 &6467615659999516200
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
-  damage: 11
+  cost: 31
+  damage: 7
 --- !u!58 &6384977667385306002
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -203,4 +203,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.008037835, y: 0.13806148}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.7
