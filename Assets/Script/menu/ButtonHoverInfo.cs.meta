@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Assets/Script/menu/ButtonHoverInfo.cs.meta
 <<<<<<< Updated upstream
 guid: 7b8e637a5b6f28744b58893228150d17
@@ -15,6 +16,9 @@ guid: 36a500ebcf65b724e985954812ad35db
 ========
 guid: 37b3352172efe4e4a8ae860b87283a71
 >>>>>>>> Stashed changes:Assets/Script/menu/ButtonHoverInfo.cs.meta
+>>>>>>> Stashed changes
+=======
+guid: 37b3352172efe4e4a8ae860b87283a71
 >>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
