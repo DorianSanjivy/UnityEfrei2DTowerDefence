@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -15,9 +10,10 @@ public class ButtonHoverInfo : MonoBehaviour
     public List<Button> buttons = new List<Button>(); // Liste des boutons
     public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associés
     public TextMeshProUGUI infoText; // Texte du panneau Info_panel (TMP)
-    
+
     [Header("Prefab Descriptions")]
     public List<string> prefabDescriptions = new List<string>(); // Descriptions des prefabs
+
 
     void Start()
     {
@@ -66,12 +62,12 @@ public class ButtonHoverInfo : MonoBehaviour
         if (prefabInfo != null && infoText != null)
         {
             // Génère une description à partir des données du prefab
-            string description = $"\n\nCost : {prefabInfo.cost}\n\nDamage : {prefabInfo.damage}\n\nDescription : {prefabDescriptions[index]}";
+            string description = $"Coût : {prefabInfo.cost}\nDégâts : {prefabInfo.damage}\nDescription : {prefabDescriptions[index]}";
             infoText.text = description;
         }
         else
         {
-            Debug.LogError($"Prefab n'a pas de script 'PrefabInfo' attaché !");
+            Debug.LogError($"Prefab {prefab.name} n'a pas de script 'PrefabInfo' attaché !");
         }
     }
 
@@ -82,43 +78,5 @@ public class ButtonHoverInfo : MonoBehaviour
         {
             infoText.text = string.Empty;
         }
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class NewBehaviourScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     }
 }
