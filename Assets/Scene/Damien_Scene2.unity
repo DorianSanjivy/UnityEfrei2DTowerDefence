@@ -6788,7 +6788,7 @@ GameObject:
   - component: {fileID: 1164428471}
   - component: {fileID: 1164428470}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Info_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Co\xFBt : \t\tD\xE9gats :\t\tPort\xE9e : \n\nDescription : "
+  m_text: "Cost : \t\tDamage : \n\nDescription : "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9994,6 +9994,7 @@ MonoBehaviour:
   - {fileID: 8409054297861555100, guid: 66baf8e02ce1daa40bb4eaa9d698d517, type: 3}
   - {fileID: 5495461304747087776, guid: 5557b00bb37313e42ae13496e6830364, type: 3}
   - {fileID: 5345073076237053657, guid: 71369927a7b85e54695e1f60ed6c8782, type: 3}
+  roadPrefabs: []
 --- !u!1 &1738411795
 GameObject:
   m_ObjectHideFlags: 0
@@ -11268,8 +11269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8543542, y: 0.12440742}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -125.89258, y: 13.23999}
-  m_SizeDelta: {x: 251.78525, y: 26.48}
+  m_AnchoredPosition: {x: -126.34, y: -46.2022}
+  m_SizeDelta: {x: 252.69, y: 145.3644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941338186
 MonoBehaviour:
@@ -12502,6 +12503,7 @@ GameObject:
   - component: {fileID: 2072005913}
   - component: {fileID: 2072005911}
   - component: {fileID: 2072005912}
+  - component: {fileID: 2072005914}
   m_Layer: 0
   m_Name: GameMenu
   m_TagString: Untagged
@@ -12564,6 +12566,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2072005914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072005910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8e637a5b6f28744b58893228150d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1001441502}
+  - {fileID: 329054328}
+  - {fileID: 2005001316}
+  - {fileID: 1999050382}
+  - {fileID: 1318450542}
+  prefabs:
+  - {fileID: 153325477690795682, guid: 6dedc49010116354d88a1e4502029d8a, type: 3}
+  - {fileID: 153325477690795682, guid: bf0ea9ece85cff543a0a1dae72a0225c, type: 3}
+  - {fileID: 5741532354101464544, guid: 92769aace5bb7524fad2ffea9ca3c688, type: 3}
+  - {fileID: 7339700489925792188, guid: 5ae1e4b35077cce498268453b862d0c3, type: 3}
+  - {fileID: 7339700489925792188, guid: 5ae1e4b35077cce498268453b862d0c3, type: 3}
+  infoText: {fileID: 1164428470}
+  prefabDescriptions:
+  - A Scratchcrow scratches in a circular short range. It's perfect to put in corners
+  - Slowmill doesn't do any damage but it slows the enemies in short range, do not
+    put this alone...
+  - Bag-art throws a projectile in a long range and attacks in area of effect (AOE),
+    goes well with slowing windmill !
+  - Eggxterminator shots normal eggs but cost the less, you can buy it at the start
+    to help you defend yourself against those animals...
+  - Beeftaker targets enemies with the most HP (COWS)
 --- !u!1 &2080995221
 GameObject:
   m_ObjectHideFlags: 0
