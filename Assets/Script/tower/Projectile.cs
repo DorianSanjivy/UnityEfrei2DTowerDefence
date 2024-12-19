@@ -5,17 +5,21 @@ using System.Collections.Generic;
 public class Projectile : MonoBehaviour
 {
     public float speed = 5f;          // Vitesse du projectile
-    private int damage;           // D�g�ts inflig�s
-    private Vector3 moveDirection;    // Direction du mouvement
+    private int damage;              // Dégâts infligés
+    private Vector3 moveDirection;   // Direction du mouvement
     private GameObject target;
 
     // Set the movement direction
     public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
-
     }
-    public void SetDamage(int newDamage) { damage = newDamage; }
+
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
+    }
+
     void Update()
     {
         if (target != null)
@@ -28,7 +32,10 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else { Destroy(gameObject); }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,5 +51,11 @@ public class Projectile : MonoBehaviour
 
             Destroy(gameObject); // Destroy the projectile after impact
         }
+    }
+
+    // Get the current target of the projectile
+    public GameObject GetTarget()
+    {
+        return target;
     }
 }

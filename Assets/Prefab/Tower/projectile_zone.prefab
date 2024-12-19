@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4747280274224333814}
   - component: {fileID: 8200370538494277289}
   - component: {fileID: 7023402008795389632}
+  - component: {fileID: 8943856675459289677}
   m_Layer: 0
   m_Name: projectile_zone
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -1519500299
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d3976911326edd4685704d8f3ed4a1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8613d57b594d1374bb9071f571adea56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,3 +165,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.235
+--- !u!114 &8943856675459289677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117249329766582178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188c60e6cd375154d8b583a3a8d0e298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSprites:
+  - {fileID: 21300000, guid: 8613d57b594d1374bb9071f571adea56, type: 3}
+  - {fileID: 21300000, guid: 18da01ad1ae18e445aa4693677503bdf, type: 3}
+  animationSpeed: 0.2
