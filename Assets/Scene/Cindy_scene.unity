@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689848041}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05062661a0b853845a70f675f758aba4, type: 3}
   m_Name: 
@@ -3392,8 +3392,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e85ac18e0178a04d9f4d294984a6d0b, type: 2}
   - {fileID: 11400000, guid: 1436e770ca8fa894898a6c29f7ed8316, type: 2}
   - {fileID: 11400000, guid: 427218869f8eae9438f425c861ae3afb, type: 2}
+  - {fileID: 11400000, guid: 8fa3eeb930e74d349afdee20afd445e2, type: 2}
+  - {fileID: 11400000, guid: 6c4df727a20138649ba0851454de9265, type: 2}
+  - {fileID: 11400000, guid: 140d8f3449e40384c9dbbb7be8d619f0, type: 2}
+  - {fileID: 11400000, guid: 756ddd1c702502640bc98d288a7b227e, type: 2}
+  - {fileID: 11400000, guid: c9699600431f62648a4f83f4275543a8, type: 2}
+  - {fileID: 11400000, guid: 8e246d070424b914482ed9c8f2f99c67, type: 2}
   pathManager: {fileID: 1224414070}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 1
 --- !u!114 &1699849932
 MonoBehaviour:
   m_ObjectHideFlags: 0

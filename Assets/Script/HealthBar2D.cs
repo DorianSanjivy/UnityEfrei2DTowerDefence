@@ -31,6 +31,9 @@ public class HealthBarManager : MonoBehaviour
     {
         if (healthBar == null || healthBarBackground == null) return;
 
+        // Clamp pour éviter que la santé soit en dehors des limites
+        GlobalVariables.grangeCurrentHealth = Mathf.Clamp(GlobalVariables.grangeCurrentHealth, 0, GlobalVariables.grangeMaxHealth);
+
         // Calculer la proportion de vie restante
         float healthPercentage = (float)GlobalVariables.grangeCurrentHealth / GlobalVariables.grangeMaxHealth;
 
@@ -64,4 +67,5 @@ public class HealthBarManager : MonoBehaviour
             spriteRenderer.color = Color.Lerp(Color.red, Color.green, healthPercentage);
         }
     }
+
 }
