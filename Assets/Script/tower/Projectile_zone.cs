@@ -3,12 +3,14 @@ using UnityEngine;
 public class Projectile_zone : MonoBehaviour
 {
     public float speed = 5f;            // Vitesse du projectile
-    public int damage = 50;             // Dégâts infligés
+    private int damage ;             // Dégâts infligés
     public float explosionRadius = 2f;  // Rayon des dégâts de zone
     public GameObject explosionEffect;  // Effet visuel pour l'explosion (facultatif)
 
     private GameObject target;          // Cible de la tour
 
+
+    public void SetDamage(int newDamage) { damage = newDamage; }
     public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
@@ -29,8 +31,9 @@ public class Projectile_zone : MonoBehaviour
             Explode();
         }
         }
+        else { Destroy(gameObject); }
 
-        
+
     }
 
     private void Explode()

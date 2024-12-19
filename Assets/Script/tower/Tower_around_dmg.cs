@@ -4,14 +4,15 @@ using UnityEngine;
 public class ZoneDamageTower : MonoBehaviour
 {
     public float damageInterval = 2f; // Temps entre chaque dégâts (en secondes)
-    public int damageAmount = 30;     // Dégâts infligés
+    private int damageAmount;
     private float damageCooldown = 0f;
+    public Tower towerScript;
 
     public GameObject damageEffect; // Référence à l'effet visuel
 
 
     private List<Animal> enemiesInRange = new List<Animal>(); // Liste des ennemis dans le rayon
-
+    void Start() { damageAmount = towerScript.damage; }
     void Update()
     {
         // Gérer le cooldown pour les dégâts

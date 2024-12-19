@@ -3,15 +3,18 @@ using System.Collections;
 
 using UnityEngine;
 
-public class TTower_maxhp_target : MonoBehaviour
+public class Tower_maxhp_target : MonoBehaviour
 {
     public GameObject projectilePrefab; // Le prefab du projectile
     public Transform firePoint;         // Point d'où partent les projectiles
     public float fireRate = 1f;
     public float burstDelay = 0.2f;// Temps entre chaque tir
-
+    private Tower towerScript;
     private float fireCooldown = 0f;    // Cooldown pour les tirs
     private List<Animal> enemiesInRange = new List<Animal>();
+
+    void Start() { towerScript = GetComponent<Tower>();  }
+
 
     void Update()
     {
@@ -60,6 +63,7 @@ public class TTower_maxhp_target : MonoBehaviour
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
             projectile_mxhp projScript = projectile.GetComponent<projectile_mxhp>();
+            projScript.SetDamage(towerScript.damage);
 
             if (projScript != null)
             {

@@ -9,10 +9,13 @@ public class Tour_zone : MonoBehaviour
     public float fireRate = 1f; // Temps entre chaque tir
     public Transform firePoint; // Point d'où partent les projectiles
     public float rotationSpeed = 5f; // Vitesse de rotation vers la cible
-
+    private Tower towerScript;
     private List<GameObject> enemiesInRange = new List<GameObject>(); // Liste des ennemis dans le rayon
     private float fireCooldown = 0f; // Temps restant avant le prochain tir
 
+
+
+    void Start() { towerScript = GetComponent<Tower>(); }
     void Update()
     {
         // Retirer les ennemis détruits de la liste
@@ -48,6 +51,7 @@ public class Tour_zone : MonoBehaviour
 
             // Donner une direction au projectile
             Projectile_zone projScript = projectile.GetComponent<Projectile_zone>();
+            projScript.SetDamage(towerScript.damage);
             if (projScript != null && target != null)
             {
                 projScript.SetTarget(target);

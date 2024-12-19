@@ -5,19 +5,30 @@ using System.Collections.Generic;
 public class Projectile : MonoBehaviour
 {
     public float speed = 5f;          // Vitesse du projectile
-    public int damage = 25;           // D�g�ts inflig�s
+    private int damage;           // D�g�ts inflig�s
     private Vector3 moveDirection;    // Direction du mouvement
+    private GameObject target;
 
     // Set the movement direction
-    public void SetDirection(Vector3 direction)
+    public void SetTarget(GameObject newTarget)
     {
-        moveDirection = direction;
-    }
+        target = newTarget;
 
+    }
+    public void SetDamage(int newDamage) { damage = newDamage; }
     void Update()
     {
-        // Move the projectile in the set direction
-        transform.position += moveDirection * speed * Time.deltaTime;
+        if (target != null)
+        {
+            Vector3 direction = (target.transform.position - transform.position).normalized;
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, target.transform.position) < 0.1f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else { Destroy(gameObject); }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
