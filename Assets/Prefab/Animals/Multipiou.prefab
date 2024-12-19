@@ -104,6 +104,8 @@ MonoBehaviour:
   health: 10
   damage: 3
   moneyDrop: 10
+  coinPrefab: {fileID: 8128007248402130457, guid: da4e76fc952d9b94a9c087ad06b1fda7, type: 3}
+  dropRadius: 1
 --- !u!114 &6312303958692463356
 MonoBehaviour:
   m_ObjectHideFlags: 0

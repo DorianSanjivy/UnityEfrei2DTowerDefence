@@ -9,6 +9,8 @@ public class TowerGrid : MonoBehaviour
     private int rows = 9;  // Number of rows
     private int cols = 16; // Number of columns
 
+    private bool isPaused = false; // Tracks if the game is paused
+
     private Dictionary<Vector2Int, GameObject> placedTowers = new Dictionary<Vector2Int, GameObject>(); // Track placed towers
     private Dictionary<string, int> towerMapping = new Dictionary<string, int>
     {
@@ -18,6 +20,8 @@ public class TowerGrid : MonoBehaviour
         { "Big", 3 },
         { "MaxHP", 4 }
     };
+
+    private string selectedTowerIndex = "Wind"; // Currently selected tower type (default: Wind)
 
     void Start()
     {
@@ -48,6 +52,14 @@ public class TowerGrid : MonoBehaviour
 
     void Update()
     {
+
+        // Check for tower selection keys (1 to 5)
+        if (Input.GetKeyDown(KeyCode.Alpha1)) selectedTowerIndex = "Wind"; // Wind Tower
+        if (Input.GetKeyDown(KeyCode.Alpha2)) selectedTowerIndex = "Slow"; // Slow Tower
+        if (Input.GetKeyDown(KeyCode.Alpha3)) selectedTowerIndex = "Zone"; // Zone Tower
+        if (Input.GetKeyDown(KeyCode.Alpha4)) selectedTowerIndex = "Big"; // Big Tower
+        if (Input.GetKeyDown(KeyCode.Alpha5)) selectedTowerIndex = "MaxHP"; // MaxHP Tower
+
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
             int[] tile = GetTileFromMousePosition();
@@ -55,10 +67,16 @@ public class TowerGrid : MonoBehaviour
             {
                 if (testArray.GetValueAt(tile[1], tile[0]) == "0")
                 {
-                    if (GlobalVariables.playerMoney >= 1)
+                    int towerIndex = towerMapping[selectedTowerIndex];
+                    int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
+
+                    if (GlobalVariables.playerMoney >= towerCost)
                     {
-                        GlobalVariables.playerMoney -= 1;
-                        testArray.ChangeAt(tile[1], tile[0], "Wind"); // Example: Wind tower
+                        GlobalVariables.playerMoney -= towerCost;
+
+                        // Change the cell value based on selected tower
+                        testArray.ChangeAt(tile[1], tile[0], selectedTowerIndex);
+                        testArray.ToString2DDebugLog();
                         InstantiateTower(tile[0], tile[1]);
                     }
                 }
@@ -70,9 +88,25 @@ public class TowerGrid : MonoBehaviour
             int[] tile = GetTileFromMousePosition();
             if (tile != null)
             {
+                DestroyTower(tile[0], tile[1]);
                 testArray.ChangeAt(tile[1], tile[0], "0");
                 testArray.ToString2DDebugLog();
-                DestroyTower(tile[0], tile[1]);
+            }
+        }
+
+        // Check if "P" key is pressed
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            // Toggle between paused and unpaused
+            if (isPaused)
+            {
+                Time.timeScale = 1;
+                isPaused = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                isPaused = true;
             }
         }
     }
@@ -128,11 +162,33 @@ public class TowerGrid : MonoBehaviour
         // Check if there's a tower at this position
         if (placedTowers.ContainsKey(tileKey))
         {
-            // Destroy the tower
-            Destroy(placedTowers[tileKey]);
+            // Get the tower type from the testArray
+            string towerType = testArray[tileY, tileX];
+            Debug.Log(towerType);
+            
+            // Ensure the tower type is valid
+            if (towerMapping.ContainsKey(towerType))
+            {
+                // Get the tower index and cost
+                int towerIndex = towerMapping[towerType];
+                int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
 
-            // Remove the tower from the tracking dictionary
-            placedTowers.Remove(tileKey);
+                // Refund half the cost
+                int refundAmount = Mathf.FloorToInt(towerCost / 2);
+                GlobalVariables.playerMoney += refundAmount;
+
+                Debug.Log($"Tower destroyed at {tileX}, {tileY}. Refunded: {refundAmount}");
+
+                // Destroy the tower object
+                Destroy(placedTowers[tileKey]);
+
+                // Remove the tower from the tracking dictionary
+                placedTowers.Remove(tileKey);
+            }
+            else
+            {
+                Debug.LogWarning($"Invalid tower type at {tileX}, {tileY}: {towerType}");
+            }
         }
         else
         {
