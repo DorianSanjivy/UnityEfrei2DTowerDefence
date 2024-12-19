@@ -4,6 +4,7 @@ using UnityEngine;
 public class TowerGrid : MonoBehaviour
 {
     public GameObject[] towerPrefabs; // Array to hold different tower prefabs
+    public GameObject[] roadPrefabs; // Array to hold different road prefabs
     private string[,] testArray;
 
     private int rows = 9;  // Number of rows
@@ -21,6 +22,16 @@ public class TowerGrid : MonoBehaviour
         { "MaxHP", 4 }
     };
 
+    private Dictionary<string, int> roadMapping = new Dictionary<string, int>
+    {
+        { "RoadV", 0 },
+        { "RoadH", 1 },
+        { "RoadC1", 2 },
+        { "RoadC2", 3 },
+        { "RoadC3", 4 },
+        { "RoadC4", 5 }
+    };
+
     private string selectedTowerIndex = "Wind"; // Currently selected tower type (default: Wind)
 
     void Start()
@@ -29,15 +40,18 @@ public class TowerGrid : MonoBehaviour
         testArray = new string[9, 16]
         {
             { "Barn", "Barn", "Barn", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" },
-            { "Barn", "Barn", "Barn", "0", "0", "Road", "Road", "Road", "Road", "0", "0", "0", "0", "0", "0", "0" },
-            { "Barn", "Barn", "Barn", "0", "0", "Road", "0", "0", "Road", "0", "0", "0", "0", "0", "0", "0" },
-            { "0", "Road", "0", "0", "0", "Road", "0", "0", "Road", "0", "Road", "Road", "Road", "Road", "0", "0" },
-            { "0", "Road", "0", "0", "0", "Road", "0", "0", "Road", "0", "Road", "0", "0", "Road", "0", "0" },
-            { "0", "Road", "0", "0", "0", "Road", "0", "0", "Road", "0", "Road", "0", "0", "Road", "0", "0" },
-            { "0", "Road", "Road", "Road", "Road", "Road", "0", "0", "Road", "0", "Road", "0", "0", "Road", "Road", "Road" },
-            { "0", "0", "0", "0", "0", "0", "0", "0", "Road", "Road", "Road", "0", "0", "0", "0", "0" },
+            { "Barn", "Barn", "Barn", "0", "0", "RoadC4", "RoadH", "RoadH", "RoadC1", "0", "0", "0", "0", "0", "0", "0" },
+            { "Barn", "Barn", "Barn", "0", "0", "RoadV", "0", "0", "RoadV", "0", "0", "0", "0", "0", "0", "0" },
+            { "0", "RoadV", "0", "0", "0", "RoadV", "0", "0", "RoadV", "0", "RoadC4", "RoadH", "RoadH", "RoadC1", "0", "0" },
+            { "0", "RoadV", "0", "0", "0", "RoadV", "0", "0", "RoadV", "0", "RoadV", "0", "0", "RoadV", "0", "0" },
+            { "0", "RoadV", "0", "0", "0", "RoadV", "0", "0", "RoadV", "0", "RoadV", "0", "0", "RoadV", "0", "0" },
+            { "0", "RoadC3", "RoadH", "RoadH", "RoadH", "RoadC2", "0", "0", "RoadV", "0", "RoadV", "0", "0", "RoadC3", "RoadH", "RoadH" },
+            { "0", "0", "0", "0", "0", "0", "0", "0", "RoadC3", "RoadH", "RoadC2", "0", "0", "0", "0", "0" },
             { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" }
         };
+
+        // Spawn roads
+        SpawnRoads();
 
         // Example initial placement
         testArray.ChangeAt(3, 6, "Wind");
@@ -48,6 +62,34 @@ public class TowerGrid : MonoBehaviour
         InstantiateTower(0, 5);
 
         testArray.ToString2DDebugLog();
+    }
+
+    void SpawnRoads()
+    {
+        Vector2 gridStart = new Vector2(-9f, 4.25f); // Top-left corner of the grid
+        Vector2 gridEnd = new Vector2(9.1f, -5.3f);  // Bottom-right corner of the grid
+        float cellWidth = (gridEnd.x - gridStart.x) / (cols - 1);
+        float cellHeight = (gridStart.y - gridEnd.y) / (rows - 1);
+
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < cols; x++)
+            {
+                string cellType = testArray[y, x];
+
+                if (roadMapping.ContainsKey(cellType))
+                {
+                    // Calculate the position of the tile
+                    float posX = gridStart.x + (x * cellWidth);
+                    float posY = gridStart.y - (y * cellHeight);
+                    Vector2 position = new Vector2(posX, posY);
+
+                    // Get the road prefab index and instantiate
+                    int roadIndex = roadMapping[cellType];
+                    Instantiate(roadPrefabs[roadIndex], position, Quaternion.identity);
+                }
+            }
+        }
     }
 
     void Update()
