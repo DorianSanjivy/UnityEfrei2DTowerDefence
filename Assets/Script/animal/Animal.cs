@@ -8,6 +8,8 @@ public class Animal : MonoBehaviour
     public int damage;
     private bool isSlowed = false;
     public int moneyDrop;
+    public GameObject coinPrefab; // Reference to the coin prefab
+    public float dropRadius = 1.0f; // Radius of the circle to spawn coins
 
     protected Transform[] pathNodes;
     protected int currentNodeIndex = 0;
@@ -85,7 +87,14 @@ public class Animal : MonoBehaviour
 
     protected virtual void Die()
     {
+        // Instantiate coins around the object
+        for (int i = 0; i < moneyDrop; i++)
+        {
+            Vector2 randomPosition = Random.insideUnitCircle * dropRadius;
+            Vector3 spawnPosition = new Vector3(transform.position.x + randomPosition.x, transform.position.y + randomPosition.y, transform.position.z);
+            Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+        }
+
         Destroy(gameObject);
-        GlobalVariables.playerMoney += moneyDrop;
     }
 }
