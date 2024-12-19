@@ -8570,6 +8570,7 @@ MonoBehaviour:
   - {fileID: 8409054297861555100, guid: 4b1e9f074c9b3cf41a4e7e7d945b1691, type: 3}
   - {fileID: 5495461304747087776, guid: 4ca8ce5dd776c3d4385d768b7eb56742, type: 3}
   - {fileID: 5345073076237053657, guid: e8a852168fddc57448c6c77d9735227d, type: 3}
+  roadPrefabs: []
 --- !u!1001 &1732329883
 PrefabInstance:
   m_ObjectHideFlags: 0

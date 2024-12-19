@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2420784220258341805}
   - component: {fileID: 8563415764975755394}
   m_Layer: 0
-  m_Name: maxhp_bullet_niv3
+  m_Name: maxhp_bullet_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

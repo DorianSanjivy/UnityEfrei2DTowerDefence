@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4343476843675598669}
   - component: {fileID: 1998086745482550353}
   m_Layer: 0
-  m_Name: focus_maxhp_niv1
+  m_Name: focus_maxhp_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,8 +170,6 @@ MonoBehaviour:
   firePoint: {fileID: 4324835069018060558}
   fireRate: 1
   burstDelay: 0.2
-  towerScript: {fileID: 1998086745482550353}
-  damage: 11
 --- !u!114 &1998086745482550353
 MonoBehaviour:
   m_ObjectHideFlags: 0
