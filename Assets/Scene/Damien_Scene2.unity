@@ -1567,7 +1567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &356634774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3814,6 +3814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 356634773}
   shopButton: {fileID: 0}
+  activate: 0
 --- !u!114 &680135539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5322,6 +5323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 356634773}
   shopButton: {fileID: 0}
+  activate: 0
 --- !u!114 &964551200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12525,6 +12527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 964551197}
   shopButton: {fileID: 356634773}
+  activate: 0
 --- !u!114 &2072005912
 MonoBehaviour:
   m_ObjectHideFlags: 0
