@@ -8193,10 +8193,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefabs:
   - {fileID: 7339700489925792188, guid: 5ae1e4b35077cce498268453b862d0c3, type: 3}
-  - {fileID: 1168096036595308104, guid: f30df87f4da6f6b42b4815a0a3e6a511, type: 3}
-  - {fileID: 8409054297861555100, guid: 4b1e9f074c9b3cf41a4e7e7d945b1691, type: 3}
-  - {fileID: 5495461304747087776, guid: 4ca8ce5dd776c3d4385d768b7eb56742, type: 3}
+  - {fileID: 153325477690795682, guid: bf0ea9ece85cff543a0a1dae72a0225c, type: 3}
+  - {fileID: 153325477690795682, guid: 6dedc49010116354d88a1e4502029d8a, type: 3}
+  - {fileID: 5741532354101464544, guid: 92769aace5bb7524fad2ffea9ca3c688, type: 3}
   - {fileID: 5345073076237053657, guid: e8a852168fddc57448c6c77d9735227d, type: 3}
+  roadPrefabs: []
 --- !u!1 &1738411795
 GameObject:
   m_ObjectHideFlags: 0
