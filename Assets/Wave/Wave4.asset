@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7334163f739524cad32f1e7e8f7340, type: 3}
   m_Name: Wave4
   m_EditorClassIdentifier: 
-  waveSteps: []
+  waveSteps:
+  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+    spawnInterval: 2
+  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+    spawnInterval: 0
+  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+    spawnInterval: 8
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+    spawnInterval: 2
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 5
+  - enemyPrefab: {fileID: 5741532354101464544, guid: b230ade4b21aec54fb7b96dbdb7919b6, type: 3}
+    spawnInterval: 1
+  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+    spawnInterval: 0
