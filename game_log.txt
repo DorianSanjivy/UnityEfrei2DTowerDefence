@@ -5503,3 +5503,122 @@ TowerGrid.Start () (at Assets/Script/grid/TowerGrid.cs:40)
 2024-12-19 12:04:27 [Log] trt : Poulet(Clone)
 2024-12-19 12:04:27 [Log] took damage0
 2024-12-19 12:04:27 [Log] 11 dmg
+2024-12-19 13:48:07 [Log] 
+
+2024-12-19 13:48:08 [Log] Début de la vague 1
+2024-12-19 13:48:08 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 13:48:08 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-19 13:48:08 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-19 13:48:08 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-19 13:48:08 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 13:48:08 [Log] Zone	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 13:48:08 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	Slow	Road	Road	Road	
+2024-12-19 13:48:08 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-19 13:48:08 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 13:48:08 [Exception] NullReferenceException: Object reference not set to an instance of an object
+Stack Trace: ZoneDamageTower.Start () (at Assets/Script/tower/Tower_around_dmg.cs:15)
+
+2024-12-19 13:48:09 [Log] detected
+2024-12-19 13:48:09 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 13:48:10 [Log] Cochon(Clone) est ralenti � 0,4 speed :1
+2024-12-19 13:48:10 [Log] ralentitCochon(Clone) (Animal)
+2024-12-19 13:48:19 [Log] detected
+2024-12-19 13:48:19 [Log] Trigger d�tect� avec : Poulet(Clone)
+2024-12-19 13:48:20 [Log] Poulet(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:48:20 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-19 13:48:26 [Log] detected
+2024-12-19 13:48:26 [Log] Trigger d�tect� avec : Vache(Clone)
+2024-12-19 13:48:26 [Log] Vache(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:48:26 [Log] ralentitVache(Clone) (Animal)
+2024-12-19 13:48:30 [Log] detected
+2024-12-19 13:48:30 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:48:39 [Log] detected
+2024-12-19 13:48:39 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 13:48:43 [Log] detected
+2024-12-19 13:48:43 [Log] Trigger d�tect� avec : Vache(Clone)
+2024-12-19 13:48:43 [Log] Vache(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:48:43 [Log] ralentitVache(Clone) (Animal)
+2024-12-19 13:48:49 [Log] detected
+2024-12-19 13:48:49 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:48:50 [Log] detected
+2024-12-19 13:48:50 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:48:57 [Log] detected
+2024-12-19 13:48:57 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 13:49:02 [Log] detected
+2024-12-19 13:49:02 [Log] Trigger d�tect� avec : Vache(Clone)
+2024-12-19 13:49:02 [Log] Vache(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:49:02 [Log] ralentitVache(Clone) (Animal)
+2024-12-19 13:49:06 [Log] Vague 1 terminée !
+2024-12-19 13:49:11 [Log] Début de la vague 2
+2024-12-19 13:49:12 [Log] detected
+2024-12-19 13:49:12 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:49:22 [Log] detected
+2024-12-19 13:49:22 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:49:32 [Log] detected
+2024-12-19 13:49:32 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:49:42 [Log] detected
+2024-12-19 13:49:42 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:50:17 [Log] 
+
+2024-12-19 13:50:17 [Log] Début de la vague 1
+2024-12-19 13:50:17 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 13:50:17 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-19 13:50:17 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-19 13:50:17 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-19 13:50:17 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 13:50:17 [Log] Zone	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 13:50:17 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	Slow	Road	Road	Road	
+2024-12-19 13:50:17 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-19 13:50:17 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 13:50:17 [Exception] NullReferenceException: Object reference not set to an instance of an object
+Stack Trace: ZoneDamageTower.Start () (at Assets/Script/tower/Tower_around_dmg.cs:15)
+
+2024-12-19 13:50:19 [Log] detected
+2024-12-19 13:50:19 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 13:50:29 [Log] detected
+2024-12-19 13:50:29 [Log] Trigger d�tect� avec : Poulet(Clone)
+2024-12-19 13:50:29 [Log] Poulet(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:50:29 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-19 13:50:35 [Log] detected
+2024-12-19 13:50:35 [Log] Trigger d�tect� avec : Vache(Clone)
+2024-12-19 13:50:36 [Log] Vache(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:50:36 [Log] ralentitVache(Clone) (Animal)
+2024-12-19 13:50:40 [Log] detected
+2024-12-19 13:50:40 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:50:49 [Log] detected
+2024-12-19 13:50:49 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 13:50:52 [Log] detected
+2024-12-19 13:50:52 [Log] Trigger d�tect� avec : Vache(Clone)
+2024-12-19 13:50:53 [Log] Vache(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 13:50:53 [Log] ralentitVache(Clone) (Animal)
+2024-12-19 13:50:59 [Log] detected
+2024-12-19 13:50:59 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:51:00 [Log] detected
+2024-12-19 13:51:00 [Log] Trigger d�tect� avec : Minipiou(Clone)
+2024-12-19 13:51:06 [Log] detected
+2024-12-19 13:51:06 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 14:01:57 [Log] 
+
+2024-12-19 14:01:57 [Log] Début de la vague 1
+2024-12-19 14:01:57 [Log] Barn	Barn	Barn	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 14:01:57 [Log] Barn	Barn	Barn	0	0	Road	Road	Road	Road	0	0	0	0	0	0	0	
+2024-12-19 14:01:57 [Log] Barn	Barn	Barn	0	0	Road	0	0	Road	0	0	0	0	0	0	0	
+2024-12-19 14:01:57 [Log] 0	Road	0	0	0	Road	Wind	0	Road	0	Road	Road	Road	Road	0	0	
+2024-12-19 14:01:57 [Log] 0	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 14:01:57 [Log] Zone	Road	0	0	0	Road	0	0	Road	0	Road	0	0	Road	0	0	
+2024-12-19 14:01:57 [Log] 0	Road	Road	Road	Road	Road	0	0	Road	0	Road	0	Slow	Road	Road	Road	
+2024-12-19 14:01:57 [Log] 0	0	0	0	0	0	0	0	Road	Road	Road	0	0	0	0	0	
+2024-12-19 14:01:57 [Log] 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+2024-12-19 14:01:57 [Log] Cochon(Clone) est ralenti � 0 speed :1
+2024-12-19 14:01:57 [Log] ralentitCochon(Clone) (Animal)
+2024-12-19 14:01:57 [Log] ralentitCochon(Clone) (Animal)
+2024-12-19 14:01:57 [Exception] NullReferenceException: Object reference not set to an instance of an object
+Stack Trace: ZoneDamageTower.Start () (at Assets/Script/tower/Tower_around_dmg.cs:15)
+
+2024-12-19 14:01:59 [Log] detected
+2024-12-19 14:01:59 [Log] Trigger d�tect� avec : Cochon(Clone)
+2024-12-19 14:02:08 [Log] Poulet(Clone) est ralenti � 0,6 speed :1,5
+2024-12-19 14:02:08 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-19 14:02:08 [Log] ralentitPoulet(Clone) (Animal)
+2024-12-19 14:02:10 [Log] detected
+2024-12-19 14:02:10 [Log] Trigger d�tect� avec : Poulet(Clone)
