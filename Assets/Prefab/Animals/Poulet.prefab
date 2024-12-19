@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  health: 2
-  damage: 1
+  health: 5
+  damage: 2
   moneyDrop: 3
   coinPrefab: {fileID: 8128007248402130457, guid: da4e76fc952d9b94a9c087ad06b1fda7, type: 3}
   dropRadius: 1

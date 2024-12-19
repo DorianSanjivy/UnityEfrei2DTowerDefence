@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e2b6bbecee1ca4fbc7770e5f4375f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageInterval: 2
+  damageInterval: 3
   towerScript: {fileID: 5469043374329642595}
   damageEffect: {fileID: 0}
 --- !u!114 &5469043374329642595
@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
-  damage: 0
+  cost: 25
+  damage: 3
 --- !u!58 &-594753887136644672
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.2
 --- !u!1 &5901441384522524431
 GameObject:
   m_ObjectHideFlags: 0

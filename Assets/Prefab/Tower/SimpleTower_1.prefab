@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5228035577598191003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19, y: 0.67, z: 0}
+  m_LocalPosition: {x: 0.01, y: 1.34, z: 0}
   m_LocalScale: {x: 2.7454264, y: 2.7454264, z: 2.7454264}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 7339700489925792188}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.04, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -345,7 +345,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1.42}
   serializedVersion: 2
-  m_Radius: 1.7
+  m_Radius: 2
 --- !u!114 &5056489862878427136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
-  fireRate: 1
+  fireRate: 2
   firePoint: {fileID: 642402515659118538}
   rotationSpeed: 5
 --- !u!114 &3495239715476423487
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 11
+  cost: 10
   damage: 1
 --- !u!1 &9045093008452415643
 GameObject:
@@ -402,7 +402,7 @@ Transform:
   m_GameObject: {fileID: 9045093008452415643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23, y: 0.67, z: 0}
+  m_LocalPosition: {x: 0.02, y: 1.35, z: 0}
   m_LocalScale: {x: 3.128, y: 3.0251, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
