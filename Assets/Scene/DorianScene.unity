@@ -3705,11 +3705,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 7339700489925792188, guid: 5ae1e4b35077cce498268453b862d0c3, type: 3}
-  - {fileID: 153325477690795682, guid: bf0ea9ece85cff543a0a1dae72a0225c, type: 3}
-  - {fileID: 153325477690795682, guid: 6dedc49010116354d88a1e4502029d8a, type: 3}
-  - {fileID: 5741532354101464544, guid: 92769aace5bb7524fad2ffea9ca3c688, type: 3}
-  - {fileID: 5345073076237053657, guid: e8a852168fddc57448c6c77d9735227d, type: 3}
+  - {fileID: 7339700489925792188, guid: 37609bca4baa41e438ebb8ae1dc8c4b6, type: 3}
+  - {fileID: 153325477690795682, guid: ae6c7b3ea65d7a248908c0fe523d19f6, type: 3}
+  - {fileID: 153325477690795682, guid: ebd13e37be9219e45821d65c0af06155, type: 3}
+  - {fileID: 5741532354101464544, guid: 28b61d8b70490504d8f7c1d540d85d2a, type: 3}
+  - {fileID: 5345073076237053657, guid: 0699250d9701aa545aba778c70193c36, type: 3}
   roadPrefabs:
   - {fileID: 5230018602529572984, guid: 4466ea7cd1e4e3448ac6b05caaaecca8, type: 3}
   - {fileID: 8271566122424915767, guid: 73ee867fd5ac56349962d1fe43ead921, type: 3}
