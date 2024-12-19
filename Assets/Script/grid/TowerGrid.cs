@@ -86,9 +86,9 @@ public class TowerGrid : MonoBehaviour
             int[] tile = GetTileFromMousePosition();
             if (tile != null)
             {
+                DestroyTower(tile[0], tile[1]);
                 testArray.ChangeAt(tile[1], tile[0], "0");
                 testArray.ToString2DDebugLog();
-                DestroyTower(tile[0], tile[1]);
             }
         }
     }
@@ -144,11 +144,33 @@ public class TowerGrid : MonoBehaviour
         // Check if there's a tower at this position
         if (placedTowers.ContainsKey(tileKey))
         {
-            // Destroy the tower
-            Destroy(placedTowers[tileKey]);
+            // Get the tower type from the testArray
+            string towerType = testArray[tileY, tileX];
+            Debug.Log(towerType);
+            
+            // Ensure the tower type is valid
+            if (towerMapping.ContainsKey(towerType))
+            {
+                // Get the tower index and cost
+                int towerIndex = towerMapping[towerType];
+                int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
 
-            // Remove the tower from the tracking dictionary
-            placedTowers.Remove(tileKey);
+                // Refund half the cost
+                int refundAmount = Mathf.FloorToInt(towerCost / 2);
+                GlobalVariables.playerMoney += refundAmount;
+
+                Debug.Log($"Tower destroyed at {tileX}, {tileY}. Refunded: {refundAmount}");
+
+                // Destroy the tower object
+                Destroy(placedTowers[tileKey]);
+
+                // Remove the tower from the tracking dictionary
+                placedTowers.Remove(tileKey);
+            }
+            else
+            {
+                Debug.LogWarning($"Invalid tower type at {tileX}, {tileY}: {towerType}");
+            }
         }
         else
         {
