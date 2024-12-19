@@ -6,6 +6,7 @@ public class Tower : MonoBehaviour
 {
     public int cost;
     private int level;
+    public int damage; 
 
     // Start is called before the first frame update
     void Start()

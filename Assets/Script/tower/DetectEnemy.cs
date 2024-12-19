@@ -10,6 +10,12 @@ public class DetectEnemy : MonoBehaviour
     public Transform firePoint; // Point d'o� partent les projectiles
     private List<GameObject> enemiesInRange = new List<GameObject>(); // Liste des ennemis dans le rayon
     private float fireCooldown = 0f; // Temps restant avant le prochain tir
+    private Tower towerScript;
+    public float rotationSpeed = 5f;
+
+
+
+    void Start() { towerScript = GetComponent<Tower>(); }
 
     void Update()
     {
@@ -40,20 +46,16 @@ public class DetectEnemy : MonoBehaviour
 
     private void Shoot(GameObject target)
     {
-        if (projectilePrefab != null && firePoint != null && target != null)
+        if (projectilePrefab != null && firePoint != null )
         {
-            // Calculate the direction to the target
-            Vector3 direction = (target.transform.position - firePoint.position).normalized;
-
-            // Instantiate the projectile at firePoint with proper rotation toward the target
-            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, rotation);
+            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
             // Assign the calculated direction to the projectile
             Projectile projScript = projectile.GetComponent<Projectile>();
-            if (projScript != null)
+            projScript.SetDamage(towerScript.damage);
+            if (projScript != null && target != null)
             {
-                projScript.SetDirection(direction);
+                projScript.SetTarget(target);
             }
         }
     }

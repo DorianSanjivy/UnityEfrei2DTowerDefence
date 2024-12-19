@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6116843494449877980}
   - component: {fileID: 1776179474026609879}
   - component: {fileID: 7006302644340546090}
-  - component: {fileID: 1819591892600320642}
+  - component: {fileID: 3967779075910861743}
   m_Layer: 0
-  m_Name: arround_dmg
+  m_Name: arround_dmg niv2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8409054297861555100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.42, y: -3.91, z: 0}
-  m_LocalScale: {x: 2.3521, y: 2.3161, z: 1}
+  m_LocalPosition: {x: 6.8445, y: -4.0058, z: 0}
+  m_LocalScale: {x: 2.801595, y: 2.6744664, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9168695313468401416}
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: -277851965
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 450b80e2cd189b044bbfdd22c558bb48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 560dbc47bc367f048b631b7035f29506, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.42, y: 1.54}
+  m_Size: {x: 0.7, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.8
 --- !u!114 &7006302644340546090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e2b6bbecee1ca4fbc7770e5f4375f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageInterval: 2
-  damageAmount: 30
+  damageInterval: 3
+  towerScript: {fileID: 3967779075910861743}
   damageEffect: {fileID: 8813026810261796394}
---- !u!114 &1819591892600320642
+--- !u!114 &3967779075910861743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 20
+  damage: 20
 --- !u!1 &8813026810261796394
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,8 +179,8 @@ Transform:
   m_GameObject: {fileID: 8813026810261796394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.02, z: 0}
-  m_LocalScale: {x: 1.9999999, y: 2.0310864, z: 4.7041993}
+  m_LocalPosition: {x: -0.215, y: -0.114, z: 0}
+  m_LocalScale: {x: 0.7736065, y: 0.8100173, z: 4.7041993}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 886271785270522957}
@@ -225,12 +226,12 @@ SpriteRenderer:
   m_SortingLayerID: -1519500299
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d77afeb4830de4743b9f230f8cbe687f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8d81c7ccadbae54192912add73cc2af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.28, y: 0.47}
+  m_Size: {x: 0.7, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

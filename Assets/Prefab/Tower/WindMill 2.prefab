@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 5056489862878427136}
   - component: {fileID: 3495239715476423487}
   m_Layer: 0
-  m_Name: WindMill
+  m_Name: WindMill 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
