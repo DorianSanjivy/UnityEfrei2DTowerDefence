@@ -189,7 +189,7 @@ MonoBehaviour:
   health: 8
   damage: 5
   moneyDrop: 6
-  coinPrefab: {fileID: 8128007248402130457, guid: da4e76fc952d9b94a9c087ad06b1fda7, type: 3}
+  coinPrefab: {fileID: 2588204975628622341, guid: 9d8dea4611ed0384a960aa007a9cd44d, type: 3}
   dropRadius: 1
 --- !u!114 &6536601690676483553
 MonoBehaviour:

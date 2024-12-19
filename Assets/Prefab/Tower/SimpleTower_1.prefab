@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5228035577598191003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019999951, y: 0.5199999, z: 0}
+  m_LocalPosition: {x: 0.019999951, y: 0.945, z: 0}
   m_LocalScale: {x: 2.7454264, y: 2.7454264, z: 2.7454264}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6411492184821322550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.843, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 5056489862878427136}
   - component: {fileID: 3495239715476423487}
   - component: {fileID: 4960073012262236216}
+  - component: {fileID: 1156934606446805773}
   m_Layer: 0
   m_Name: SimpleTower_1
   m_TagString: Untagged
@@ -391,6 +392,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   squashIntensity: 0.06
   squashSpeed: 5
+--- !u!114 &1156934606446805773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339700489925792188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c328e83631332c544b7ef3d543cf6fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rafaleTower: {fileID: 2393166738586733923}
+  arrow: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
 --- !u!1 &9045093008452415643
 GameObject:
   m_ObjectHideFlags: 0
