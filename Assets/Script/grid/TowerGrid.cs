@@ -62,52 +62,65 @@ public class TowerGrid : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            int[] tile = GetTileFromMousePosition();
-            if (tile != null)
-            {
-                if (testArray.GetValueAt(tile[1], tile[0]) == "0")
-                {
-                    int towerIndex = towerMapping[selectedTowerIndex];
-                    int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
-
-                    if (GlobalVariables.playerMoney >= towerCost)
-                    {
-                        GlobalVariables.playerMoney -= towerCost;
-
-                        // Change the cell value based on selected tower
-                        testArray.ChangeAt(tile[1], tile[0], selectedTowerIndex);
-                        testArray.ToString2DDebugLog();
-                        InstantiateTower(tile[0], tile[1]);
-                    }
-                }
-            }
+            TryToCreateTower(selectedTowerIndex);
         }
 
         if (Input.GetMouseButtonDown(1)) // Right mouse button
         {
-            int[] tile = GetTileFromMousePosition();
-            if (tile != null)
-            {
-                DestroyTower(tile[0], tile[1]);
-                testArray.ChangeAt(tile[1], tile[0], "0");
-                testArray.ToString2DDebugLog();
-            }
+            TryToDeleteTower();
         }
 
         // Check if "P" key is pressed
         if (Input.GetKeyDown(KeyCode.P))
         {
-            // Toggle between paused and unpaused
-            if (isPaused)
+            PauseUnpauseGame();
+        }
+    }
+
+    public void TryToCreateTower(string LocalselectedTowerIndex){
+        int[] tile = GetTileFromMousePosition();
+
+        if (tile != null)
+        {
+            if (testArray.GetValueAt(tile[1], tile[0]) == "0")
             {
-                Time.timeScale = 1;
-                isPaused = false;
+                int towerIndex = towerMapping[LocalselectedTowerIndex];
+                int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
+
+                if (GlobalVariables.playerMoney >= towerCost)
+                {
+                    GlobalVariables.playerMoney -= towerCost;
+
+                    // Change the cell value based on selected tower
+                    testArray.ChangeAt(tile[1], tile[0], LocalselectedTowerIndex);
+                    testArray.ToString2DDebugLog();
+                    InstantiateTower(tile[0], tile[1]);
+                }
             }
-            else
-            {
-                Time.timeScale = 0;
-                isPaused = true;
-            }
+        }
+    }
+
+    public void TryToDeleteTower(){
+        int[] tile = GetTileFromMousePosition();
+        if (tile != null)
+        {
+            DestroyTower(tile[0], tile[1]);
+            testArray.ChangeAt(tile[1], tile[0], "0");
+            testArray.ToString2DDebugLog();
+        }
+    }
+
+    public void PauseUnpauseGame(){
+        // Toggle between paused and unpaused
+        if (isPaused)
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            isPaused = true;
         }
     }
 
