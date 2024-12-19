@@ -1,21 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:Assets/Script/menu/ButtonSelection.cs.meta
-guid: 36a500ebcf65b724e985954812ad35db
-========
-guid: 37b3352172efe4e4a8ae860b87283a71
->>>>>>>> Stashed changes:Assets/Script/menu/ButtonHoverInfo.cs.meta
-=======
-guid: 36a500ebcf65b724e985954812ad35db
->>>>>>> Stashed changes
-=======
-guid: 36a500ebcf65b724e985954812ad35db
->>>>>>> Stashed changes
-=======
-guid: 36a500ebcf65b724e985954812ad35db
->>>>>>> Stashed changes
+guid: 3c0e733136286c0459a4f9638d3f215c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

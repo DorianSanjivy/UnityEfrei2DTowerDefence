@@ -12534,7 +12534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2072005910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a500ebcf65b724e985954812ad35db, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c0e733136286c0459a4f9638d3f215c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:
@@ -12545,11 +12545,11 @@ MonoBehaviour:
   - {fileID: 1318450542}
   - {fileID: 1063032972}
   predefinedValues:
-  - Scarecrow
-  - Windslow
-  - Ressort
+  - Zone
+  - Wind
+  - Spring
   - Canon
-  - Rafale
+  - MaxHP
   - Upgrade
 --- !u!4 &2072005913
 Transform:
