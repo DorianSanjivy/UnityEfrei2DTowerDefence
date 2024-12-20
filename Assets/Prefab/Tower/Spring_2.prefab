@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 25
-  damage: 5
+  cost: 30
+  damage: 3
 --- !u!58 &8335806813332860783
 CircleCollider2D:
   m_ObjectHideFlags: 0
