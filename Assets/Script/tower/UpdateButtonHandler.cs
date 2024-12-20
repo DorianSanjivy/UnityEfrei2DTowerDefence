@@ -19,18 +19,19 @@ public class UpdateButtonHandler : MonoBehaviour
     }
 
     // Méthode appelée lors du clic sur le bouton
-    void OnUpdateClick()
+    public void OnUpdateClick()
     {
+        print   ("ttt");
         if (towerGameObject != null && newTowerPrefab != null)
         {
             // Obtenir la position de la tour actuelle
             Vector3 towerPosition = towerGameObject.transform.position;
 
-            // Instancier le nouveau prefab de la tour à la position de l'ancienne
-            Instantiate(newTowerPrefab, towerPosition, Quaternion.identity);
-
             // Détruire l'ancienne tour
             Destroy(towerGameObject);
+
+            // Instancier le nouveau prefab de la tour à la position de l'ancienne
+            Instantiate(newTowerPrefab, towerPosition, Quaternion.identity);
 
             // Optionnel : Si tu veux aussi cacher le bouton après le clic
             gameObject.SetActive(false);
