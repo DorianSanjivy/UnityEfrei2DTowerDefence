@@ -168,6 +168,7 @@ public class TowerGrid : MonoBehaviour
                     testArray.ChangeAt(tile[1], tile[0], LocalselectedTowerIndex);
                     testArray.ToString2DDebugLog();
                     InstantiateTower(tile[0], tile[1]);
+                    SoundManager.Play("Construct");
                 }
             }
         }
