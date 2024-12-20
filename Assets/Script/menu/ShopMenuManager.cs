@@ -7,13 +7,18 @@ public class ShopMenuManager : MonoBehaviour
     public GameObject shopPanel; // Le panel du menu
     public GameObject shopButton;
 
-    public bool activate = false;
+    private TowerGrid towerGrid;
+
+    void Start() {
+        towerGrid = FindObjectOfType<TowerGrid>();
+    }
 
     public void ToggleShop()
     {
+        Debug.Log("ToggleShop called");
         shopPanel.SetActive(!shopPanel.activeSelf);
         shopButton.SetActive(!shopButton.activeSelf);
-        activate = !activate;
+        towerGrid.ToggleActivate();
     }
 }
 
