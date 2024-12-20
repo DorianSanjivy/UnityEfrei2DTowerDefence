@@ -835,7 +835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.13866442}
   m_AnchorMax: {x: 0.9363285, y: 0.3144899}
-  m_AnchoredPosition: {x: -1.199997, y: -2.1000443}
+  m_AnchoredPosition: {x: -1.199997, y: -2.1000366}
   m_SizeDelta: {x: -1.8817005, y: 3.7814941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330971311
@@ -1417,7 +1417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &495370622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2051,7 +2051,8 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4504751139710069101, guid: 6fad0e9d31d2f3341a6b567cdf764c8d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2571,6 +2572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d638bec22a1b64492047f34ed8a0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 0}
+  bossSpawnPoint: {fileID: 0}
 --- !u!114 &689848046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3736,6 +3739,7 @@ MonoBehaviour:
   - Canon
   - MaxHP
   - Upgrade
+  selectedTower: Wind
 --- !u!114 &1205493813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3750,7 +3754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 0}
   shopButton: {fileID: 0}
-  activate: 0
 --- !u!4 &1205493814
 Transform:
   m_ObjectHideFlags: 0
@@ -4791,7 +4794,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 1271445773}
   shopButton: {fileID: 0}
-  activate: 0
 --- !u!114 &1553906342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6284,7 +6286,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 1271445773}
   shopButton: {fileID: 0}
-  activate: 0
 --- !u!114 &2023393381
 MonoBehaviour:
   m_ObjectHideFlags: 0
