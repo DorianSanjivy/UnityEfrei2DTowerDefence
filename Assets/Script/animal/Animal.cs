@@ -93,6 +93,8 @@ public class Animal : MonoBehaviour
             Vector2 randomPosition = Random.insideUnitCircle * dropRadius;
             Vector3 spawnPosition = new Vector3(transform.position.x + randomPosition.x, transform.position.y + randomPosition.y, transform.position.z);
             Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+
+            SoundManager.Play("Damage");
         }
 
         Destroy(gameObject);
