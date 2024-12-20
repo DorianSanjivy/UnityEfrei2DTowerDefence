@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7830741127320074828, guid: 98caeb07f0007134b80169958b407f5a, type: 3}
   firePoint: {fileID: 4324835069018060558}
-  fireRate: 1
+  fireRate: 2
   burstDelay: 0.2
 --- !u!114 &7984417074940124147
 MonoBehaviour:
@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
-  damage: 0
+  cost: 60
+  damage: 5
 --- !u!1 &7528879040787353837
 GameObject:
   m_ObjectHideFlags: 0

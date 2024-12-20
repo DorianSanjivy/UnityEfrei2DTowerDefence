@@ -362,7 +362,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
   fireRate: 1
   firePoint: {fileID: 642402515659118538}
-  cannon: {fileID: 0}
+  cannonSprite: {fileID: 0}
+  rotationSpeed: 720
+  projectileSpeed: 5
 --- !u!114 &3495239715476423487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 11
+  cost: 20
   damage: 2
 --- !u!114 &-6879039526865938915
 MonoBehaviour:

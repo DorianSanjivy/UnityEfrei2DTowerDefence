@@ -33,3 +33,15 @@ MonoBehaviour:
     spawnInterval: 0
   - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
     spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+    spawnInterval: 4

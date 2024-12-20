@@ -185,10 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244657c56e56bf943bd81d001fa5be71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  health: 5
+  speed: 3
+  health: 7
   damage: 2
-  moneyDrop: 1
+  moneyDrop: 2
   coinPrefab: {fileID: 2588204975628622341, guid: 9d8dea4611ed0384a960aa007a9cd44d, type: 3}
   dropRadius: 1
 --- !u!114 &6536601690676483553
