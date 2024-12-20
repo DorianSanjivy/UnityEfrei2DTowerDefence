@@ -23,7 +23,7 @@ public class UpdateUI : MonoBehaviour
     {
         string value = "Life: " + GlobalVariables.grangeCurrentHealth.ToString(); 
         LifeTxt.text = value;
-        string value2 = "Money: " + GlobalVariables.playerMoney.ToString();
+        string value2 = GlobalVariables.playerMoney.ToString();
         MoneyTxt.text = value2;
     }
 }
