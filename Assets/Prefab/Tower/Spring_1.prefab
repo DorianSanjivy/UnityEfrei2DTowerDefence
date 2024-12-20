@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3006590577058278722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.021, y: 0.133, z: 0}
+  m_LocalPosition: {x: -0.012, y: 0.371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,10 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 15388662580513455}
   - component: {fileID: 654575790297515961}
-  - component: {fileID: 6536601690676483553}
   - component: {fileID: 4446444245181187684}
   - component: {fileID: 6467615659999516200}
   - component: {fileID: 6493517067753004875}
+  - component: {fileID: -4159884150137893648}
   m_Layer: 0
   m_Name: Spring_1
   m_TagString: Enemy
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 1231899163
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcd4a822affa463458966ba6043402bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e98697a441e7f394fbb389c5978a034c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,25 +120,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6536601690676483553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5741532354101464544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188c60e6cd375154d8b583a3a8d0e298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSprites:
-  - {fileID: 21300000, guid: bcd4a822affa463458966ba6043402bb, type: 3}
-  - {fileID: 21300000, guid: 185047a555c90184f8d9a247bb35f868, type: 3}
-  - {fileID: 21300000, guid: 0e7dad93ce227ac44902a797602978b3, type: 3}
-  - {fileID: 21300000, guid: 185047a555c90184f8d9a247bb35f868, type: 3}
-  - {fileID: 21300000, guid: 0e7dad93ce227ac44902a797602978b3, type: 3}
-  animationSpeed: 0.2
 --- !u!114 &4446444245181187684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +182,20 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.17}
+  m_Offset: {x: 0, y: 0.16681354}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.8612812
+--- !u!114 &-4159884150137893648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741532354101464544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6aa354b7083a4f4cb93f9a52262a731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squashIntensity: 0.06
+  squashSpeed: 5

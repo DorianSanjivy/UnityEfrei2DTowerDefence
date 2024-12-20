@@ -103,6 +103,14 @@ MonoBehaviour:
   speed: 4
   explosionRadius: 2
   explosionEffect: {fileID: 0}
+  explosionSprites:
+  - {fileID: 21300000, guid: bc47a4b87a4e79949b0e945e985c8fa4, type: 3}
+  - {fileID: 21300000, guid: b97f2410aa6c428469859c34310252fd, type: 3}
+  - {fileID: 21300000, guid: 700049f92714e034b81ca1a3f77fde6b, type: 3}
+  - {fileID: 21300000, guid: 5b8e516aa1801e442affaa21f6f1bf3b, type: 3}
+  - {fileID: 21300000, guid: 89e6a6a9564560a4799ddf09fc635e1e, type: 3}
+  explosionFrameRate: 0.05
+  curveHeight: 2
 --- !u!50 &8200370538494277289
 Rigidbody2D:
   serializedVersion: 4
@@ -172,7 +180,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6117249329766582178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 188c60e6cd375154d8b583a3a8d0e298, type: 3}
   m_Name: 

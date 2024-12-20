@@ -362,7 +362,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
   fireRate: 1
   firePoint: {fileID: 642402515659118538}
-  rotationSpeed: 5
+  cannon: {fileID: 0}
 --- !u!114 &3495239715476423487
 MonoBehaviour:
   m_ObjectHideFlags: 0

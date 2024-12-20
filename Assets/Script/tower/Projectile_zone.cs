@@ -1,46 +1,107 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile_zone : MonoBehaviour
 {
     public float speed = 5f;            // Vitesse du projectile
-    private int damage ;             // DÈg‚ts infligÈs
-    public float explosionRadius = 2f;  // Rayon des dÈg‚ts de zone
-    public GameObject explosionEffect;  // Effet visuel pour l'explosion (facultatif)
+    private int damage;                 // D√©g√¢ts inflig√©s
+    public float explosionRadius = 2f;  // Rayon des d√©g√¢ts de zone
+    public GameObject explosionEffect;  // Effet visuel pour l'explosion (optionnel)
+
+    private SpriteRenderer spriteRenderer;  // R√©f√©rence au SpriteRenderer du projectile
+    public Sprite[] explosionSprites;      // Tableau des sprites d'explosion
+    public float explosionFrameRate = 0.1f; // Temps entre chaque frame de l'animation d'explosion
 
     private GameObject target;          // Cible de la tour
+    private Vector3 startPos;           // Position de d√©part
+    private Vector3 targetPos;          // Position de la cible
+    private float startTime;            // Temps de d√©part du projectile
+    private float travelTime;           // Temps total de vol
 
+    public float curveHeight = 2f;      // Hauteur du sommet de la courbe
+    private bool isExploding = false;   // Indique si l'explosion est en cours
 
     public void SetDamage(int newDamage) { damage = newDamage; }
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
-        Debug.Log("trt : " + target.name);
+        targetPos = target.transform.position;
+        startPos = transform.position;
+
+        // Calculer le temps de vol en fonction de la distance et de la vitesse
+        travelTime = Vector3.Distance(startPos, targetPos) / speed;
+
+        startTime = Time.time;  // Enregistrer le moment o√π le tir commence
     }
 
     void Update()
     {
+        // Si l'explosion est en cours, ne pas ex√©cuter la logique de mouvement
+        if (isExploding) return;
+
         if (target != null)
         {
-            // DÈplacer le projectile vers la cible
-        Vector3 direction = (target.transform.position - transform.position).normalized;
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-            //Debug.Log("Projectile se dÈplace vers : " + target.name);
-            // VÈrifie si le projectile atteint la cible
-            if (Vector3.Distance(transform.position, target.transform.position) < 0.1f)
+            float timeElapsed = Time.time - startTime;
+            float percentageComplete = timeElapsed / travelTime;
+
+            if (percentageComplete < 1)
+            {
+                // Calculer la position courb√©e
+                Vector3 midPoint = (startPos + targetPos) / 2;
+                midPoint.y += curveHeight;
+                transform.position = CalculateParabolicCurve(startPos, midPoint, targetPos, percentageComplete);
+            }
+            else
+            {
+                Explode();
+            }
+        }
+        else
         {
-            Explode();
+            Destroy(gameObject); // Si la cible n'existe plus, d√©truire le projectile
         }
-        }
-        else { Destroy(gameObject); }
+    }
 
-
+    private Vector3 CalculateParabolicCurve(Vector3 start, Vector3 mid, Vector3 end, float t)
+    {
+        float u = 1 - t;
+        return u * u * start + 2 * u * t * mid + t * t * end;
     }
 
     private void Explode()
     {
-        
+        // Arr√™ter toute logique de mise √† jour
+        isExploding = true;
 
-        // DÈg‚ts de zone : dÈtecter tous les ennemis dans le rayon
+        // Appliquer imm√©diatement les d√©g√¢ts
+        ApplyExplosionDamage();
+
+        // Lancer l'animation d'explosion
+        StartCoroutine(PlayExplosionAnimation());
+    }
+
+    private IEnumerator PlayExplosionAnimation()
+    {
+        // Afficher les sprites d'explosion
+        for (int i = 0; i < explosionSprites.Length; i++)
+        {
+            spriteRenderer.sprite = explosionSprites[i];
+            yield return new WaitForSeconds(explosionFrameRate);
+        }
+
+        // D√©truire le projectile apr√®s l'animation
+        Destroy(gameObject);
+    }
+
+    private void ApplyExplosionDamage()
+    {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
         foreach (Collider2D collider in colliders)
@@ -49,15 +110,17 @@ public class Projectile_zone : MonoBehaviour
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
-                Debug.Log("took damage"+ damage);
             }
         }
 
-        // DÈtruire le projectile aprËs l'explosion
-        Destroy(gameObject);
+        // Optionnel : Ajouter un effet visuel (comme des particules)
+        if (explosionEffect != null)
+        {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        }
     }
 
-    // Visualiser le rayon d'explosion dans l'Èditeur
+    // Visualiser le rayon d'explosion dans l'√©diteur
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

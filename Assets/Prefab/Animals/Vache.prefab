@@ -204,7 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSprites:
-  - {fileID: 21300000, guid: feb7af05f880dd74495cccf8b73d63d8, type: 3}
+  - {fileID: 21300000, guid: 48febcced65cb894b913fa0c604d1f76, type: 3}
+  - {fileID: 21300000, guid: b23193cf5534afc488c0ea0f5270eeb3, type: 3}
   animationSpeed: 0.2
 --- !u!50 &-1656605259865020210
 Rigidbody2D:

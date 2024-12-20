@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6485375303632761359}
   - component: {fileID: 1321886313618747213}
   - component: {fileID: 7142187700142013689}
+  - component: {fileID: 4504751139710069101}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -193,3 +194,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4504751139710069101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432849973701796864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6aa354b7083a4f4cb93f9a52262a731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squashIntensity: 0.06
+  squashSpeed: 5
