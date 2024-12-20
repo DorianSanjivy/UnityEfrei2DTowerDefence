@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveSteps:
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 15
+    spawnInterval: 6
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 30
+    spawnInterval: 6
   - enemyPrefab: {fileID: 5741532354101464544, guid: b230ade4b21aec54fb7b96dbdb7919b6, type: 3}
     spawnInterval: 0

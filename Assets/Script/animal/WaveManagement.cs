@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
 
     private int currentWaveIndex = 0;
     private List<GameObject> activeEnemies = new List<GameObject>(); // Suivi des ennemis actifs
+    private bool stopSpawning = false; // Permet d'arrêter le spawn des vagues
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator SpawnWaves()
     {
-        while (currentWaveIndex < waves.Count)
+        while (currentWaveIndex < waves.Count && !stopSpawning)
         {
             WaveData currentWave = waves[currentWaveIndex];
             Debug.Log($"Début de la vague {currentWaveIndex + 1}");
@@ -33,19 +34,29 @@ public class WaveManager : MonoBehaviour
             currentWaveIndex++;
 
             // Temps d'attente avant la prochaine vague
-            if (currentWaveIndex < waves.Count)
+            if (currentWaveIndex < waves.Count && !stopSpawning)
             {
                 yield return new WaitForSeconds(timeBetweenWaves);
             }
         }
 
-        Debug.Log("Toutes les vagues ont été générées !");
+        if (stopSpawning)
+        {
+            Debug.Log("Le système de vagues a été arrêté !");
+        }
+        else
+        {
+            Debug.Log("Toutes les vagues ont été générées !");
+        }
     }
 
     private IEnumerator SpawnWave(WaveData wave)
     {
         foreach (WaveStep step in wave.waveSteps)
         {
+            if (stopSpawning)
+                yield break; // Arrêter le spawn si le système est stoppé
+
             if (pathManager.nodes.Length > 0)
             {
                 // Instancier l'ennemi au premier nœud
@@ -68,5 +79,20 @@ public class WaveManager : MonoBehaviour
     {
         // Nettoyer la liste des ennemis actifs (supprimer ceux qui sont détruits)
         activeEnemies.RemoveAll(enemy => enemy == null);
+    }
+
+    public void StopSpawning()
+    {
+        stopSpawning = true;
+
+        // Supprimer tous les ennemis actifs
+        foreach (GameObject enemy in activeEnemies)
+        {
+            if (enemy != null)
+            {
+                Destroy(enemy);
+            }
+        }
+        activeEnemies.Clear(); // Vider la liste
     }
 }
