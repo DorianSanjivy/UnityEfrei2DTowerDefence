@@ -922,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &495370622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1406,6 +1406,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 950087825
       objectReference: {fileID: 0}
+    - target: {fileID: 4504751139710069101, guid: 6fad0e9d31d2f3341a6b567cdf764c8d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4504751139710069101, guid: 6fad0e9d31d2f3341a6b567cdf764c8d, type: 3}
+      propertyPath: squashIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7142187700142013689, guid: 6fad0e9d31d2f3341a6b567cdf764c8d, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -1422,7 +1430,8 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4504751139710069101, guid: 6fad0e9d31d2f3341a6b567cdf764c8d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1786,6 +1795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d638bec22a1b64492047f34ed8a0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 0}
+  bossSpawnPoint: {fileID: 0}
 --- !u!114 &689848046
 MonoBehaviour:
   m_ObjectHideFlags: 0
