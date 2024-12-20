@@ -2540,7 +2540,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689848041}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05062661a0b853845a70f675f758aba4, type: 3}
   m_Name: 
@@ -5637,12 +5637,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 756ddd1c702502640bc98d288a7b227e, type: 2}
   - {fileID: 11400000, guid: c9699600431f62648a4f83f4275543a8, type: 2}
   - {fileID: 11400000, guid: 8e246d070424b914482ed9c8f2f99c67, type: 2}
-  - {fileID: 11400000, guid: 8ba00d8db394bc6489e1588e020779a0, type: 2}
   - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
   - {fileID: 11400000, guid: c9699600431f62648a4f83f4275543a8, type: 2}
   - {fileID: 11400000, guid: 756ddd1c702502640bc98d288a7b227e, type: 2}
   - {fileID: 11400000, guid: 8e246d070424b914482ed9c8f2f99c67, type: 2}
   - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 8ba00d8db394bc6489e1588e020779a0, type: 2}
   - {fileID: 11400000, guid: c9699600431f62648a4f83f4275543a8, type: 2}
   - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
   - {fileID: 11400000, guid: 427218869f8eae9438f425c861ae3afb, type: 2}
