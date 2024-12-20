@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 555702708721678663}
   m_Layer: 0
   m_Name: Spring_3
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 15
+  cost: 35
   damage: 7
 --- !u!58 &6384977667385306002
 CircleCollider2D:

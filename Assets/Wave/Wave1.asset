@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   waveSteps:
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+  - enemyPrefab: {fileID: 2108115041123025395, guid: 1dbd468725dfd7f4296627c4ca6394b8, type: 3}
     spawnInterval: 10
   - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
     spawnInterval: 2

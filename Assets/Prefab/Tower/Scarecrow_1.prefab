@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e2b6bbecee1ca4fbc7770e5f4375f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageInterval: 3
+  damageInterval: 2
   towerScript: {fileID: 8080738312966425440}
   damageEffect: {fileID: 0}
 --- !u!114 &8080738312966425440
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 15
+  cost: 12
   damage: 1
 --- !u!114 &6615005294409782137
 MonoBehaviour:
