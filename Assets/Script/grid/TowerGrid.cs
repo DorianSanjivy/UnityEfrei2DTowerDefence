@@ -76,7 +76,7 @@ public class TowerGrid : MonoBehaviour
     void SpawnRoads()
     {
         Vector2 gridStart = new Vector2(-9f, 4.25f); // Top-left corner of the grid
-        Vector2 gridEnd = new Vector2(9.1f, -5.3f);  // Bottom-right corner of the grid
+        Vector2 gridEnd = new Vector2(9f, -5.3f);  // Bottom-right corner of the grid
         float cellWidth = (gridEnd.x - gridStart.x) / (cols - 1);
         float cellHeight = (gridStart.y - gridEnd.y) / (rows - 1);
 
@@ -210,7 +210,7 @@ public class TowerGrid : MonoBehaviour
     {
         // Grid properties
         Vector2 gridStart = new Vector2(-9f, 4.25f); // Top-left corner of the grid
-        Vector2 gridEnd = new Vector2(9.1f, -5.3f);  // Bottom-right corner of the grid
+        Vector2 gridEnd = new Vector2(9f, -5.3f);  // Bottom-right corner of the grid
 
         // Ensure the indices are valid
         if (tileX < 0 || tileX >= cols || tileY < 0 || tileY >= rows)
