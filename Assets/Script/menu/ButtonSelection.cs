@@ -6,31 +6,30 @@ public class ButtonSelection : MonoBehaviour
 {
     [Header("UI Settings")]
     public List<Button> buttons = new List<Button>(); // Liste des boutons dans l'interface
-    public List<string> predefinedValues = new List<string>(); // Liste des valeurs associées
+    public List<string> predefinedValues = new List<string>(); // Liste des valeurs associï¿½es
+    public string selectedTower = "Wind";
 
     void Start()
     {
-        // Vérifie si le nombre de boutons correspond au nombre de valeurs
+        // Vï¿½rifie si le nombre de boutons correspond au nombre de valeurs
         if (buttons.Count != predefinedValues.Count)
         {
-            Debug.LogError("Le nombre de boutons ne correspond pas au nombre de valeurs prédéfinies !");
+            Debug.LogError("Le nombre de boutons ne correspond pas au nombre de valeurs prï¿½dï¿½finies !");
             return;
         }
 
-        // Associe chaque bouton à une valeur de la liste
+        // Associe chaque bouton ï¿½ une valeur de la liste
         for (int i = 0; i < buttons.Count; i++)
         {
-            int index = i; // Nécessaire pour capturer la bonne valeur dans une closure
+            int index = i; // Nï¿½cessaire pour capturer la bonne valeur dans une closure
             buttons[i].onClick.AddListener(() => SelectButton(index));
         }
     }
 
     void SelectButton(int index)
     {
-        // Récupère la valeur associée au bouton
-        string selectedValue = predefinedValues[index];
-        Debug.Log($"Bouton {index + 1} sélectionné, valeur : {selectedValue}");
-
-        // Faites ici ce que vous voulez avec `selectedValue`
+        // Rï¿½cupï¿½re la valeur associï¿½e au bouton
+        selectedTower = predefinedValues[index];
+        Debug.Log($"Bouton {index + 1} sï¿½lectionnï¿½, valeur : {selectedTower}");
     }
 }

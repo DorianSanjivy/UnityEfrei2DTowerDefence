@@ -15,11 +15,21 @@ public class TowerGrid : MonoBehaviour
     private Dictionary<Vector2Int, GameObject> placedTowers = new Dictionary<Vector2Int, GameObject>(); // Track placed towers
     private Dictionary<string, int> towerMapping = new Dictionary<string, int>
     {
-        { "Wind", 0 },
-        { "Slow", 1 },
-        { "Zone", 2 },
-        { "Big", 3 },
-        { "MaxHP", 4 }
+        { "Canon1", 0 },
+        { "Canon2", 1 },
+        { "Canon3", 2 },
+        { "Wind1", 3 },
+        { "Wind2", 4 },
+        { "Wind3", 5 },
+        { "Zone1", 6 },
+        { "Zone2", 7 },
+        { "Zone3", 8 },
+        { "Spring1", 9 },
+        { "Spring2", 10 },
+        { "Spring3", 11 },
+        { "MaxHP1", 12 },
+        { "MaxHP2", 13 },
+        { "MaxHP3", 14 }
     };
 
     private Dictionary<string, int> roadMapping = new Dictionary<string, int>
@@ -34,8 +44,15 @@ public class TowerGrid : MonoBehaviour
 
     private string selectedTowerIndex = "Wind"; // Currently selected tower type (default: Wind)
 
+    private bool activate = false;
+
+    private ButtonSelection buttonSelection;
+
     void Start()
     {
+
+        buttonSelection = FindObjectOfType<ButtonSelection>();
+
         // Initialize the grid
         testArray = new string[9, 16]
         {
@@ -52,14 +69,6 @@ public class TowerGrid : MonoBehaviour
 
         // Spawn roads
         SpawnRoads();
-
-        // Example initial placement
-        testArray.ChangeAt(3, 6, "Wind");
-        InstantiateTower(6, 3);
-        testArray.ChangeAt(6, 12, "Slow");
-        InstantiateTower(12, 6);
-        testArray.ChangeAt(5, 0, "Zone");
-        InstantiateTower(0, 5);
 
         testArray.ToString2DDebugLog();
     }
@@ -92,31 +101,53 @@ public class TowerGrid : MonoBehaviour
         }
     }
 
+    private bool previousActivateState = false;
+
     void Update()
     {
 
-        // Check for tower selection keys (1 to 5)
+        // Debug
         if (Input.GetKeyDown(KeyCode.Alpha1)) selectedTowerIndex = "Wind"; // Wind Tower
         if (Input.GetKeyDown(KeyCode.Alpha2)) selectedTowerIndex = "Slow"; // Slow Tower
         if (Input.GetKeyDown(KeyCode.Alpha3)) selectedTowerIndex = "Zone"; // Zone Tower
         if (Input.GetKeyDown(KeyCode.Alpha4)) selectedTowerIndex = "Big"; // Big Tower
         if (Input.GetKeyDown(KeyCode.Alpha5)) selectedTowerIndex = "MaxHP"; // MaxHP Tower
 
+        selectedTowerIndex = buttonSelection.selectedTower + "1";
+
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            TryToCreateTower(selectedTowerIndex);
+            if (activate)
+            {
+                TryToCreateTower(selectedTowerIndex);
+            }
         }
 
         if (Input.GetMouseButtonDown(1)) // Right mouse button
         {
-            TryToDeleteTower();
+            if (activate)
+            {
+                TryToDeleteTower();
+            }
         }
 
-        // Check if "P" key is pressed
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetMouseButtonDown(0)) // Left mouse button
+        {
+            if (activate && selectedTowerIndex == "Upgrade1")
+            {
+                UpgradeTower();
+            }
+        }
+
+        if (activate != previousActivateState)
         {
             PauseUnpauseGame();
+            previousActivateState = activate;
         }
+    }
+
+    public void ToggleActivate(){
+        activate = !activate;
     }
 
     public void TryToCreateTower(string LocalselectedTowerIndex){
@@ -124,7 +155,7 @@ public class TowerGrid : MonoBehaviour
 
         if (tile != null)
         {
-            if (testArray.GetValueAt(tile[1], tile[0]) == "0")
+            if ((testArray.GetValueAt(tile[1], tile[0]) == "0") && (tile[0] < 13))
             {
                 int towerIndex = towerMapping[LocalselectedTowerIndex];
                 int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
@@ -150,6 +181,11 @@ public class TowerGrid : MonoBehaviour
             testArray.ChangeAt(tile[1], tile[0], "0");
             testArray.ToString2DDebugLog();
         }
+    }
+
+    public void TryToUpgradeTower()
+    {
+        //maybe later ??
     }
 
     public void PauseUnpauseGame(){
@@ -248,6 +284,61 @@ public class TowerGrid : MonoBehaviour
         else
         {
             Debug.LogWarning($"No tower to destroy at X={tileX}, Y={tileY}");
+        }
+    }
+
+    public void UpgradeTower()
+    {
+        int[] tile = GetTileFromMousePosition();
+
+        if (tile != null)
+        {
+            // Get the tile key
+            Vector2Int tileKey = new Vector2Int(tile[0], tile[1]);
+
+            // Check if there's a tower at this position
+            if (placedTowers.ContainsKey(tileKey))
+            {
+                // Get the tower type from the testArray
+                string towerType = testArray[tile[1], tile[0]];
+
+                // Check if the tower type ends with a number
+                if (towerType.Length > 1 && char.IsDigit(towerType[^1]))
+                {
+                    // Parse the level from the tower type
+                    int currentLevel = int.Parse(towerType[^1].ToString());
+
+                    // Increment the level for the upgrade
+                    int upgradedLevel = currentLevel + 1;
+
+                    // Create the new tower type
+                    string upgradedTowerType = towerType.Substring(0, towerType.Length - 1) + upgradedLevel;
+
+                    int towerIndex = towerMapping[upgradedTowerType];
+                    int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
+
+                    // Check if the upgraded type is valid (exists in towerMapping)
+                    if (towerMapping.ContainsKey(upgradedTowerType) && GlobalVariables.playerMoney >= towerCost)
+                    {
+                        TryToDeleteTower();
+                        TryToCreateTower(upgradedTowerType);
+
+                        Debug.Log($"Upgraded {towerType} to {upgradedTowerType} at ({tile[0]}, {tile[1]})");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Upgrade type {upgradedTowerType} does not exist in towerMapping.");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Tower type {towerType} does not have a valid level to upgrade.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"No tower to upgrade at X={tile[0]}, Y={tile[1]}");
+            }
         }
     }
 
