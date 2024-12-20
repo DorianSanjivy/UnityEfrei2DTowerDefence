@@ -4,21 +4,71 @@ using UnityEngine;
 
 public class End_Game : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bossPrefab; // Le prefab du boss à assigner dans l'inspecteur
+    public Transform bossSpawnPoint; // Le point où le boss apparaîtra
+    private bool bossSpawned = false; // Pour éviter que le boss ne soit spawn plusieurs fois
+
     void Start()
     {
-        GameObject.Find("Canvas").transform.Find("Game_Over").gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // si la vie arrive à 0, on le canvas de fin de jeu
-        if (GlobalVariables.grangeCurrentHealth == 0)
+        // Vérifier si la vie de la grange atteint zéro
+        if (GlobalVariables.grangeCurrentHealth <= 0 && !bossSpawned)
         {
-            GameObject.Find("Canvas").transform.Find("Game_Over").gameObject.SetActive(true);
-            //stop the game
-            Time.timeScale = 0;
+            StopEnemySpawn(); // Arrêter le système de spawn des ennemis
+            RemoveAllMobs();  // Supprimer tous les ennemis actifs dans la scène
+            SpawnBoss();      // Faire apparaître le boss
+
+            // Marquer que le boss a déjà été spawn pour éviter de le faire plusieurs fois
+            bossSpawned = true;
+        }
+    }
+
+    /// <summary>
+    /// Arrête le système de spawn des ennemis en utilisant le WaveManager.
+    /// </summary>
+    void StopEnemySpawn()
+    {
+        // Trouver le WaveManager dans la scène
+        WaveManager waveManager = FindObjectOfType<WaveManager>();
+        if (waveManager != null)
+        {
+            waveManager.StopSpawning(); // Appeler la méthode pour arrêter les vagues
+        }
+        else
+        {
+            Debug.LogWarning("WaveManager introuvable dans la scène !");
+        }
+    }
+
+    /// <summary>
+    /// Supprime tous les ennemis actifs dans la scène.
+    /// </summary>
+    void RemoveAllMobs()
+    {
+        // Trouver tous les objets ayant le tag "Mob"
+        GameObject[] mobs = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject mob in mobs)
+        {
+            Destroy(mob); // Détruire chaque mob trouvé
+        }
+    }
+
+    /// <summary>
+    /// Fait apparaître un boss à un point spécifique dans la scène.
+    /// </summary>
+    void SpawnBoss()
+    {
+        if (bossPrefab != null && bossSpawnPoint != null)
+        {
+            // Instancier le boss au point défini dans l'inspecteur
+            Instantiate(bossPrefab, bossSpawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("BossPrefab ou BossSpawnPoint n'est pas défini dans l'inspecteur !");
         }
     }
 }
