@@ -170,6 +170,9 @@ public class TowerGrid : MonoBehaviour
                     InstantiateTower(tile[0], tile[1]);
                     SoundManager.Play("Construct");
                 }
+                else {
+                    SoundManager.Play("CantBuy");
+                }
             }
         }
     }
@@ -319,15 +322,21 @@ public class TowerGrid : MonoBehaviour
                     int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
 
                     // Check if the upgraded type is valid (exists in towerMapping)
-                    if (towerMapping.ContainsKey(upgradedTowerType) && GlobalVariables.playerMoney >= towerCost)
+                    if (towerMapping.ContainsKey(upgradedTowerType))
                     {
-                        TryToDeleteTower();
-                        TryToCreateTower(upgradedTowerType);
+                        if (GlobalVariables.playerMoney >= towerCost){
+                            TryToDeleteTower();
+                            TryToCreateTower(upgradedTowerType);
 
-                        Debug.Log($"Upgraded {towerType} to {upgradedTowerType} at ({tile[0]}, {tile[1]})");
+                            Debug.Log($"Upgraded {towerType} to {upgradedTowerType} at ({tile[0]}, {tile[1]})");
+                        }
+                        else{
+                            SoundManager.Play("CantBuy");
+                        }
                     }
                     else
                     {
+                        SoundManager.Play("CantBuy");
                         Debug.LogWarning($"Upgrade type {upgradedTowerType} does not exist in towerMapping.");
                     }
                 }
