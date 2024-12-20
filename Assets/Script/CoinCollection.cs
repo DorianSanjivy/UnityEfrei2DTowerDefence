@@ -14,6 +14,7 @@ public class CoinCollection : MonoBehaviour
 
             // Optionally destroy the coin after collection
             Destroy(gameObject);
+            SoundManager.Play("CoinCollected");
         }
     }
 }
