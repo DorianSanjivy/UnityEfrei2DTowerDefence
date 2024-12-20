@@ -307,7 +307,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7830741127320074828, guid: fa649a338289a854cb318cdb8ee66c58, type: 3}
   firePoint: {fileID: 4324835069018060558}
   fireRate: 2
-  burstDelay: 0.2
+  burstDelay: 0.4
 --- !u!114 &206528427170456695
 MonoBehaviour:
   m_ObjectHideFlags: 0

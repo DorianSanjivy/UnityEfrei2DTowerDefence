@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveSteps:
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
