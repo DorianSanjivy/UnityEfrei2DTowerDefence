@@ -29,7 +29,7 @@ public class BossCollision : MonoBehaviour
     private void TriggerGameOver()
     {
         // Affiche le canvas Game Over
-        GameObject.Find("Canvas").transform.Find("Game_over").gameObject.SetActive(true);
+        GameObject.Find("Canvas").transform.Find("Game_Over").gameObject.SetActive(true);
 
         // Optionnel : Arrêter le temps
         Time.timeScale = 0f;

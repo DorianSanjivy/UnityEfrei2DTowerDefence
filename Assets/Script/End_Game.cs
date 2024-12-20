@@ -61,7 +61,7 @@ public class End_Game : MonoBehaviour
     /// </summary>
     IEnumerator SpawnBoss()
     {
-        // Attendre pendant 10 secondes
+        // Attendre pendant 3 secondes
         yield return new WaitForSeconds(3f);
 
         // Vérifier si le prefab et le point de spawn sont définis
