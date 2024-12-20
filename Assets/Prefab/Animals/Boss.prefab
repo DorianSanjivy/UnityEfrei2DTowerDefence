@@ -146,8 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 3
-  chaseRange: 10
-  attackRange: 1
+  chaseRange: 50
+  attackRange: 0.8
   attackCooldown: 1.5
 --- !u!1 &7146292847546121764
 GameObject:
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_SortingLayerID: 950087825
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f42120ec73199c40942f2692ef733c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae0ee5d05b02d434aa70edb6deb1ce49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSprites:
-  - {fileID: 21300000, guid: 104297790a428b64795e285bcce9c599, type: 3}
-  - {fileID: 21300000, guid: c9aed63fa9dd5b0438f41681e71a4a9f, type: 3}
-  animationSpeed: 0.2
+  - {fileID: 21300000, guid: 8176e5efa8528404aaa1d8f1c6ae62f6, type: 3}
+  - {fileID: 21300000, guid: ae0ee5d05b02d434aa70edb6deb1ce49, type: 3}
+  - {fileID: 21300000, guid: 83bcf56b64402a945a02d6212432e425, type: 3}
+  animationSpeed: 0.1

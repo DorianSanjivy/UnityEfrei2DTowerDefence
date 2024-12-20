@@ -2697,8 +2697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: 357}
-  m_SizeDelta: {x: 644.2795, y: 50}
+  m_AnchoredPosition: {x: -42, y: 3}
+  m_SizeDelta: {x: 2662.465, y: 516.3538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412130041
 MonoBehaviour:
@@ -2747,8 +2747,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 350
+  m_fontSizeBase: 350
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3435,6 +3435,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 756ddd1c702502640bc98d288a7b227e, type: 2}
   - {fileID: 11400000, guid: c9699600431f62648a4f83f4275543a8, type: 2}
   - {fileID: 11400000, guid: 8e246d070424b914482ed9c8f2f99c67, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 756ddd1c702502640bc98d288a7b227e, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 8e246d070424b914482ed9c8f2f99c67, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
+  - {fileID: 11400000, guid: 4fe84c3a501683741839dafc3ac145ec, type: 2}
   pathManager: {fileID: 1224414070}
   timeBetweenWaves: 1
 --- !u!114 &1699849932

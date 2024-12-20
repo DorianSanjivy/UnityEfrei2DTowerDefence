@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Projectile_zone : MonoBehaviour
 {
     public float speed = 5f;            // Vitesse du projectile
@@ -21,6 +22,10 @@ public class Projectile_zone : MonoBehaviour
 
     public float curveHeight = 2f;      // Hauteur du sommet de la courbe
     private bool isExploding = false;   // Indique si l'explosion est en cours
+
+    // Nouveau champ pour suivre le temps écoulé
+    private float lifetime = 10f;       // Durée de vie du projectile avant qu'il soit détruit
+    private float timeAlive = 0f;       // Temps écoulé depuis le lancement
 
     public void SetDamage(int newDamage) { damage = newDamage; }
 
@@ -45,6 +50,16 @@ public class Projectile_zone : MonoBehaviour
     {
         // Si l'explosion est en cours, ne pas exécuter la logique de mouvement
         if (isExploding) return;
+
+        // Incrémenter le temps écoulé
+        timeAlive += Time.deltaTime;
+
+        // Si le projectile a dépassé son temps de vie, le détruire
+        if (timeAlive >= lifetime)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         if (target != null)
         {

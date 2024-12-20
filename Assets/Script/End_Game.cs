@@ -7,7 +7,7 @@ public class End_Game : MonoBehaviour
     public GameObject bossPrefab; // Le prefab du boss à assigner dans l'inspecteur
     public Transform bossSpawnPoint; // Le point où le boss apparaîtra
     private bool bossSpawned = false; // Pour éviter que le boss ne soit spawn plusieurs fois
-
+  
     void Start()
     {
     }
@@ -19,7 +19,7 @@ public class End_Game : MonoBehaviour
         {
             StopEnemySpawn(); // Arrêter le système de spawn des ennemis
             RemoveAllMobs();  // Supprimer tous les ennemis actifs dans la scène
-            SpawnBoss();      // Faire apparaître le boss
+            StartCoroutine(SpawnBoss()); // Lancer la coroutine pour faire apparaître le boss
 
             // Marquer que le boss a déjà été spawn pour éviter de le faire plusieurs fois
             bossSpawned = true;
@@ -57,10 +57,14 @@ public class End_Game : MonoBehaviour
     }
 
     /// <summary>
-    /// Fait apparaître un boss à un point spécifique dans la scène.
+    /// Coroutine qui attend 10 secondes avant de faire apparaître le boss.
     /// </summary>
-    void SpawnBoss()
+    IEnumerator SpawnBoss()
     {
+        // Attendre pendant 10 secondes
+        yield return new WaitForSeconds(3f);
+
+        // Vérifier si le prefab et le point de spawn sont définis
         if (bossPrefab != null && bossSpawnPoint != null)
         {
             // Instancier le boss au point défini dans l'inspecteur
