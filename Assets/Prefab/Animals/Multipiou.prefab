@@ -119,8 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSprites:
-  - {fileID: 21300000, guid: 8826637a44aa55e42becdadca55f0b8a, type: 3}
-  - {fileID: 21300000, guid: 8826637a44aa55e42becdadca55f0b8a, type: 3}
+  - {fileID: 21300000, guid: caf3af5c908e1214da980a864df24b27, type: 3}
+  - {fileID: 21300000, guid: f6e9e781d42a7d648ad24309afe80f03, type: 3}
+  - {fileID: 21300000, guid: 2cd1248e2683e3342a5c40a9dde18849, type: 3}
+  - {fileID: 21300000, guid: f6e9e781d42a7d648ad24309afe80f03, type: 3}
   animationSpeed: 0.1
 --- !u!61 &7045057692492876386
 BoxCollider2D:
@@ -154,7 +156,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008773744, y: -0.043871164}
+  m_Offset: {x: -0.009057775, y: 0.04690717}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6490308, y: 0.77187}
+  m_Size: {x: 0.4836844, y: 0.53195584}
   m_EdgeRadius: 0
 --- !u!50 &4121474240001823990
 Rigidbody2D:
