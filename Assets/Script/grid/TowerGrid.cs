@@ -154,24 +154,31 @@ public class TowerGrid : MonoBehaviour
 
         if (tile != null)
         {
-            if ((testArray.GetValueAt(tile[1], tile[0]) == "0") && (tile[0] < 13))
+            if (testArray.GetValueAt(tile[1], tile[0]) == "0")
             {
-                int towerIndex = towerMapping[LocalselectedTowerIndex];
-                int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
+                if (tile[0] < 13){
+                    int towerIndex = towerMapping[LocalselectedTowerIndex];
+                    int towerCost = towerPrefabs[towerIndex].GetComponent<Tower>().cost;
 
-                if (GlobalVariables.playerMoney >= towerCost)
-                {
-                    GlobalVariables.playerMoney -= towerCost;
+                    if (GlobalVariables.playerMoney >= towerCost)
+                    {
+                        GlobalVariables.playerMoney -= towerCost;
 
-                    // Change the cell value based on selected tower
-                    testArray.ChangeAt(tile[1], tile[0], LocalselectedTowerIndex);
-                    testArray.ToString2DDebugLog();
-                    InstantiateTower(tile[0], tile[1]);
-                    SoundManager.Play("Construct");
+                        // Change the cell value based on selected tower
+                        testArray.ChangeAt(tile[1], tile[0], LocalselectedTowerIndex);
+                        testArray.ToString2DDebugLog();
+                        InstantiateTower(tile[0], tile[1]);
+                        SoundManager.Play("Construct");
+                    }
+                    else 
+                    {
+                        SoundManager.Play("CantBuy");
+                    }
                 }
-                else {
-                    SoundManager.Play("CantBuy");
-                }
+            }
+            else 
+            {
+                SoundManager.Play("CantBuy");
             }
         }
     }
