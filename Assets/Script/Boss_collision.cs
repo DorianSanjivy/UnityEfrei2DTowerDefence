@@ -30,9 +30,10 @@ public class BossCollision : MonoBehaviour
     {
         // Affiche le canvas Game Over
         GameObject.Find("Canvas").transform.Find("Game_Over").gameObject.SetActive(true);
+        GameObject.Find("Canvas").transform.Find("GameOverImage").gameObject.SetActive(true);
 
         // Optionnel : Arrêter le temps
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
 
         Debug.Log("Le boss a touché le joueur. Game Over !");
     }

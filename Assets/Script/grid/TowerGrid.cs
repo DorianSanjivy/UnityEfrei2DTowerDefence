@@ -69,7 +69,6 @@ public class TowerGrid : MonoBehaviour
 
         // Spawn roads
         SpawnRoads();
-
         testArray.ToString2DDebugLog();
     }
 
