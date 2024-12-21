@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09370083, y: 0.13866442}
   m_AnchorMax: {x: 0.9363285, y: 0.31015432}
-  m_AnchoredPosition: {x: -3.5869598, y: -1.100357}
+  m_AnchoredPosition: {x: -3.5869598, y: -1.1003418}
   m_SizeDelta: {x: 2.891899, y: 5.7815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330971311
@@ -3353,13 +3353,13 @@ MonoBehaviour:
   - {fileID: 7339700489925792188, guid: 5ae1e4b35077cce498268453b862d0c3, type: 3}
   infoText: {fileID: 1752372969}
   prefabDescriptions:
-  - A Scratchcrow scratches in a circular short range. It's perfect to put in corners
-  - Slowmill doesn't do any damage but it slows the enemies in short range, do not
-    put this alone...
-  - Bag-art throws a projectile in a long range and attacks in area of effect (AOE),
-    goes well with slowing windmill !
-  - Eggxterminator shots normal eggs but cost the less, you can buy it at the start
-    to help you defend yourself against those animals...
+  - Scratches in a circular short range. It's perfect to put in corners
+  - Doesn't do any damage but it slows the enemies in short range, do not put this
+    alone...
+  - Throws a projectile in a long range and attacks in area of effect (AOE), goes
+    well with slowing windmill !
+  - Shots normal eggs but cost the less, you can buy it at the start to help you
+    defend yourself against those animals...
 --- !u!114 &1205493812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5958,7 +5958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4705396048798295372, guid: 5678558b1229dc241ab3d98698a507b7, type: 3}
       propertyPath: isMuted
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8008805705056813673, guid: 5678558b1229dc241ab3d98698a507b7, type: 3}
       propertyPath: m_Name

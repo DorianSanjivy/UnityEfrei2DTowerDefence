@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Scratchcrow
+  description: Scratches in a circular short range. It's perfect to put in corners
   cost: 12
   damage: 1
 --- !u!114 &6615005294409782137

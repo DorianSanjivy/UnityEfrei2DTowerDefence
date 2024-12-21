@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
-{
+{   
+    public string name;
+    public string description;
     public int cost;
     private int level;
     public int damage; 

@@ -307,6 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903d5f82b6ba8c42b7ddce2cb11765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Bag-art
+  description: Throws a projectile in a long range and attacks in area of effect
+    (AOE)
   cost: 20
   damage: 2
 --- !u!58 &6493517067753004875

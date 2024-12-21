@@ -8,7 +8,7 @@ public class ButtonHoverInfo : MonoBehaviour
 {
     [Header("UI Settings")]
     public List<Button> buttons = new List<Button>(); // Liste des boutons
-    public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associés
+    public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associï¿½s
     public TextMeshProUGUI infoText; // Texte du panneau Info_panel (TMP)
 
     [Header("Prefab Descriptions")]
@@ -17,20 +17,20 @@ public class ButtonHoverInfo : MonoBehaviour
 
     void Start()
     {
-        // Vérifie la cohérence des listes
+        // Vï¿½rifie la cohï¿½rence des listes
         if (buttons.Count != prefabs.Count)
         {
             Debug.LogError("Le nombre de boutons ne correspond pas au nombre de prefabs !");
             return;
         }
 
-        // Associer les événements de survol à chaque bouton
+        // Associer les ï¿½vï¿½nements de survol ï¿½ chaque bouton
         for (int i = 0; i < buttons.Count; i++)
         {
-            int index = i; // Nécessaire pour capturer la bonne valeur dans une closure
+            int index = i; // Nï¿½cessaire pour capturer la bonne valeur dans une closure
             EventTrigger trigger = AddEventTrigger(buttons[i]);
 
-            // Ajouter les événements
+            // Ajouter les ï¿½vï¿½nements
             AddEvent(trigger, EventTriggerType.PointerEnter, () => ShowDescription(index));
             AddEvent(trigger, EventTriggerType.PointerExit, HideDescription);
         }
@@ -38,7 +38,7 @@ public class ButtonHoverInfo : MonoBehaviour
 
     EventTrigger AddEventTrigger(Button button)
     {
-        // Ajoute un EventTrigger au bouton s'il n'existe pas déjà
+        // Ajoute un EventTrigger au bouton s'il n'existe pas dï¿½jï¿½
         EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>();
         if (trigger == null)
             trigger = button.gameObject.AddComponent<EventTrigger>();
@@ -47,7 +47,7 @@ public class ButtonHoverInfo : MonoBehaviour
 
     void AddEvent(EventTrigger trigger, EventTriggerType eventType, System.Action callback)
     {
-        // Crée une entrée pour un événement spécifique
+        // Crï¿½e une entrï¿½e pour un ï¿½vï¿½nement spï¿½cifique
         EventTrigger.Entry entry = new EventTrigger.Entry { eventID = eventType };
         entry.callback.AddListener((_) => callback());
         trigger.triggers.Add(entry);
@@ -55,19 +55,19 @@ public class ButtonHoverInfo : MonoBehaviour
 
     void ShowDescription(int index)
     {
-        // Récupère les informations du prefab associé
+        // Rï¿½cupï¿½re les informations du prefab associï¿½
         GameObject prefab = prefabs[index];
         Tower prefabInfo = prefab.GetComponent<Tower>();
 
         if (prefabInfo != null && infoText != null)
         {
-            // Génère une description à partir des données du prefab
-            string description = $"Coût : {prefabInfo.cost}\nDégâts : {prefabInfo.damage}\nDescription : {prefabDescriptions[index]}";
+            // Gï¿½nï¿½re une description ï¿½ partir des donnï¿½es du prefab
+            string description = $"{prefabInfo.name}\n\nCoÃ»t: {prefabInfo.cost}\n\nDÃ©gÃ¢ts: {prefabInfo.damage}\n\nDescription: \n{prefabInfo.description}";
             infoText.text = description;
         }
         else
         {
-            Debug.LogError($"Prefab {prefab.name} n'a pas de script 'PrefabInfo' attaché !");
+            Debug.LogError($"Prefab {prefab.name} n'a pas de script 'PrefabInfo' attachï¿½ !");
         }
     }
 
