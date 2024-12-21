@@ -11,10 +11,6 @@ public class ButtonHoverInfo : MonoBehaviour
     public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associ�s
     public TextMeshProUGUI infoText; // Texte du panneau Info_panel (TMP)
 
-    [Header("Prefab Descriptions")]
-    public List<string> prefabDescriptions = new List<string>(); // Descriptions des prefabs
-
-
     void Start()
     {
         // V�rifie la coh�rence des listes
