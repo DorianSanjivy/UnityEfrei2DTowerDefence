@@ -116,7 +116,7 @@ public class TowerGrid : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            if (activate)
+            if (activate && selectedTowerIndex != "Upgrade1")
             {
                 TryToCreateTower(selectedTowerIndex);
             }
@@ -285,6 +285,8 @@ public class TowerGrid : MonoBehaviour
 
                 // Remove the tower from the tracking dictionary
                 placedTowers.Remove(tileKey);
+                
+                SoundManager.Play("Destroy");
             }
             else
             {
@@ -331,8 +333,17 @@ public class TowerGrid : MonoBehaviour
                     if (towerMapping.ContainsKey(upgradedTowerType))
                     {
                         if (GlobalVariables.playerMoney >= towerCost){
-                            TryToDeleteTower();
-                            TryToCreateTower(upgradedTowerType);
+                            // Destroy the tower object
+                            Destroy(placedTowers[tileKey]);
+                            placedTowers.Remove(tileKey);
+                            testArray.ChangeAt(tile[1], tile[0], "0");
+                            
+                            GlobalVariables.playerMoney -= towerCost;
+                            testArray.ChangeAt(tile[1], tile[0], upgradedTowerType);
+                            testArray.ToString2DDebugLog();
+                            InstantiateTower(tile[0], tile[1]);
+                            
+                            SoundManager.Play("Upgrade");
 
                             Debug.Log($"Upgraded {towerType} to {upgradedTowerType} at ({tile[0]}, {tile[1]})");
                         }
