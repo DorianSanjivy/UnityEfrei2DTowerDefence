@@ -1,12 +1,16 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Animal : MonoBehaviour
 {
     public float speed;
     private float currentSpeed;
+    private List<float> activeSlowFactors = new List<float>();
+    private bool isSlowed = false;
+
     public int health;
     public int damage;
-    private bool isSlowed = false;
+
     public int moneyDrop;
     public GameObject coinPrefab; // Reference to the coin prefab
     public float dropRadius = 1.0f; // Radius of the circle to spawn coins
@@ -59,24 +63,33 @@ public class Animal : MonoBehaviour
         return health;
     }
 
-    public void ApplySlow(float slowFactor, float duration)
+    public void AddSlowFactor(float slowFactor)
     {
-        if (!isSlowed)
-        {
-            isSlowed = true;
-            currentSpeed *= slowFactor; // R�duit la vitesse
-            Debug.Log(gameObject.name + " est ralenti � " + currentSpeed + " speed :" + speed);
-
-            // Restaure la vitesse apr�s la dur�e
-            Invoke("ResetSpeed", duration);
-        }
+        activeSlowFactors.Add(slowFactor);
+        UpdateCurrentSpeed(); // Recalculate speed
     }
 
-    private void ResetSpeed()
+    public void RemoveSlowFactor(float slowFactor)
     {
-        currentSpeed = speed; // R�initialise la vitesse normale
-        isSlowed = false;
-        Debug.Log(gameObject.name + " retrouve sa vitesse normale.");
+        activeSlowFactors.Remove(slowFactor);
+        UpdateCurrentSpeed(); // Recalculate speed
+    }
+
+    private void UpdateCurrentSpeed()
+    {
+        if (activeSlowFactors.Count > 0)
+        {
+            float maxSlowFactor = Mathf.Min(activeSlowFactors.ToArray()); // Get the strongest slow factor
+            currentSpeed = speed * maxSlowFactor;
+            isSlowed = true;
+        }
+        else
+        {
+            currentSpeed = speed; // Restore original speed if no slow factors
+            isSlowed = false;
+        }
+
+        Debug.Log(gameObject.name + " speed updated to " + currentSpeed);
     }
 
     protected virtual void OnReachEnd()
