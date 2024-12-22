@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2393166738586733923}
   - component: {fileID: 4081317388044586744}
+  - component: {fileID: 5882973194600772413}
   m_Layer: 0
   m_Name: TowerSprite
   m_TagString: Untagged
@@ -29,7 +30,8 @@ Transform:
   m_LocalPosition: {x: 0.037, y: 0.979, z: 0}
   m_LocalScale: {x: 2.7454264, y: 2.7454264, z: 2.7454264}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 642402515659118538}
   m_Father: {fileID: 4050994017677585040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.525}
 --- !u!212 &4081317388044586744
@@ -84,6 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5882973194600772413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228035577598191003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c328e83631332c544b7ef3d543cf6fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 2393166738586733923}
+  rotationSpeed: 720
 --- !u!1 &6411492184821322550
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,12 +124,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6411492184821322550}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.042, y: 0.972, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.004579307, w: 0.9999895}
+  m_LocalPosition: {x: 0.358, y: 0.001, z: 0}
+  m_LocalScale: {x: 0.36424214, y: 0.36424214, z: 0.36424214}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4050994017677585040}
+  m_Father: {fileID: 2393166738586733923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7339700489925792188
 GameObject:
@@ -149,7 +165,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 642402515659118538}
   - {fileID: 2393166738586733923}
   - {fileID: 5895966187712426010}
   m_Father: {fileID: 0}
@@ -186,7 +201,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13148975, y: 0.49999976}
+  m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
   m_Radius: 2.5
 --- !u!114 &5056489862878427136
@@ -202,10 +217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1407159190093633299, guid: 44b698a6589b1984794107b6bb88886e, type: 3}
-  fireRate: 1
+  fireRate: 0.5
   firePoint: {fileID: 642402515659118538}
-  cannonSprite: {fileID: 2393166738586733923}
-  rotationSpeed: 720
+  cannon: {fileID: 5882973194600772413}
   projectileSpeed: 5
 --- !u!114 &3495239715476423487
 MonoBehaviour:

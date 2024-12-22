@@ -4,90 +4,70 @@ using UnityEngine;
 
 public class DetectEnemy : MonoBehaviour
 {
-    public GameObject projectilePrefab; // Le prefab du projectile
-    public float fireRate = 1f;         // Temps entre chaque tir
-    public Transform firePoint;         // Point d'où partent les projectiles
-    public Transform cannonSprite;      // Transform du sprite du canon
-    public float rotationSpeed = 720f;  // Vitesse de rotation du canon (en degrés/seconde)
-    
-    private List<GameObject> enemiesInRange = new List<GameObject>(); // Liste des ennemis dans le rayon
-    private float fireCooldown = 0f;    // Temps restant avant le prochain tir
-    private Tower towerScript;
-    public float projectileSpeed = 5f;  // Vitesse initiale du projectile
+    public GameObject projectilePrefab; // Projectile prefab
+    public float fireRate = 1f;         // Time between shots
+    public Transform firePoint;         // Point where projectiles are spawned
+    public Cannon cannon;               // Reference to the Cannon script
+    public float projectileSpeed = 5f;  // Projectile speed
 
-    void Start()
-    {
-        towerScript = GetComponent<Tower>();
+    private int damageAmount;
+
+    private List<GameObject> enemiesInRange = new List<GameObject>();
+    private float fireCooldown = 0f;
+
+    public Tower towerScript;
+
+    void Start() 
+    { 
+        towerScript = GetComponent<Tower>(); 
+        damageAmount = towerScript.damage; // Get damage value from Tower script
     }
 
     void Update()
     {
-        // Retirer les ennemis détruits de la liste
+        // Remove destroyed enemies
         enemiesInRange.RemoveAll(enemy => enemy == null);
 
         if (enemiesInRange.Count > 0)
         {
-            // Cibler le premier ennemi dans la liste
+            // Target the first enemy in range
             GameObject target = enemiesInRange[0];
+            cannon.AimAt(target.transform); // Set the target in the Cannon script
 
-            if (target != null && fireCooldown <= 0f)
+            // Fire projectile if cooldown is complete
+            if (fireCooldown <= 0f)
             {
-                // Commencer l'alignement et le tir
-                StartCoroutine(AimAndShoot(target));
-                fireCooldown = fireRate; // Réinitialiser le cooldown
+                Shoot(target);
+                fireCooldown = fireRate; // Reset cooldown
             }
         }
+        else
+        {
+            // Clear the cannon's target if no enemies are in range
+            cannon.AimAt(null);
+        }
 
-        // Réduire le cooldown
+        // Decrease cooldown timer
         if (fireCooldown > 0f)
             fireCooldown -= Time.deltaTime;
-    }
-
-    private IEnumerator AimAndShoot(GameObject target)
-    {
-        if (cannonSprite != null && target != null)
-        {
-            // Calculer la direction vers la cible
-            Vector3 direction = (target.transform.position - transform.position).normalized;
-
-            // Calculer l'angle nécessaire pour aligner le canon vers la cible
-            float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-            // Appliquer une rotation douce pour le canon
-            while (Mathf.Abs(Mathf.DeltaAngle(cannonSprite.localEulerAngles.z, targetAngle)) > 1f)
-            {
-                // Effectuer une rotation douce
-                float currentAngle = cannonSprite.localEulerAngles.z;
-                float newAngle = Mathf.LerpAngle(currentAngle, targetAngle, Time.deltaTime * rotationSpeed);
-
-                // Appliquer la nouvelle rotation au canon
-                cannonSprite.localEulerAngles = new Vector3(0, 0, newAngle);
-
-                yield return null; // Attendre la prochaine frame
-            }
-
-            // Une fois que le canon est aligné, tirer le projectile
-            Shoot(target);
-        }
     }
 
     private void Shoot(GameObject target)
     {
         if (projectilePrefab != null && firePoint != null)
         {
-            // Instancier le projectile
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
-            // Définir la direction du projectile en fonction de la rotation du canon
-            Vector3 cannonDirection = cannonSprite.up; // Le haut du canon correspond à sa direction
-            projectile.GetComponent<Rigidbody2D>().velocity = cannonDirection * projectileSpeed;
+            // Set projectile velocity
+            Vector3 direction = (target.transform.position - firePoint.position).normalized;
+            projectile.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 
-            // Affecter d'autres propriétés au projectile
+            // Set projectile properties
             Projectile projScript = projectile.GetComponent<Projectile>();
-            projScript.SetDamage(towerScript.damage);
             if (projScript != null)
             {
                 projScript.SetTarget(target);
+                projScript.SetDamage(damageAmount); // Pass damageAmount to the projectile
             }
         }
     }

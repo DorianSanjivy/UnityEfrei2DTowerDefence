@@ -50,7 +50,7 @@ public class VignetteEffectController : MonoBehaviour
             float health = Mathf.Clamp(GlobalVariables.grangeCurrentHealth, 0, 100); // Ensure health stays within bounds
 
             // Adjust vignette intensity (0.3 at low health, 0 at full health)
-            vignette.intensity.value = Mathf.Lerp(0.3f, 0f, health / 100f);
+            vignette.intensity.value = Mathf.Lerp(0.2f, 0f, health / 100f);
 
             // Adjust grayscale saturation (-100 at low health, 0 at full health)
             colorAdjustments.saturation.value = Mathf.Lerp(-18f, 0f, health / 100f);

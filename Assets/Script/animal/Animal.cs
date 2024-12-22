@@ -63,6 +63,11 @@ public class Animal : MonoBehaviour
         return health;
     }
 
+    public bool IsAlive()
+    {
+        return health > 0;
+    }
+
     public void AddSlowFactor(float slowFactor)
     {
         activeSlowFactors.Add(slowFactor);

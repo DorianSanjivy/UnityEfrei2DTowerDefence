@@ -4394,7 +4394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637363676}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnPointBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6097,5 +6097,5 @@ SceneRoots:
   - {fileID: 581490008}
   - {fileID: 1766855080}
   - {fileID: 689848043}
-  - {fileID: 2038394106}
   - {fileID: 1637363676}
+  - {fileID: 2038394106}
