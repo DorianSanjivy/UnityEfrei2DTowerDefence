@@ -216,11 +216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c0924c911e78c42a4bf572881e3ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
+  projectilePrefab: {fileID: 1407159190093633299, guid: 44b698a6589b1984794107b6bb88886e, type: 3}
   fireRate: 0.25
   firePoint: {fileID: 642402515659118538}
   cannon: {fileID: 6675380878556992480}
   projectileSpeed: 5
+  towerScript: {fileID: 0}
 --- !u!114 &3495239715476423487
 MonoBehaviour:
   m_ObjectHideFlags: 0
