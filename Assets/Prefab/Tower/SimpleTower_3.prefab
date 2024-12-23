@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -277851965
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9371807c25d07064896ce6e07874689a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1407159190093633299, guid: 44b698a6589b1984794107b6bb88886e, type: 3}
-  fireRate: 0.25
   firePoint: {fileID: 642402515659118538}
   cannon: {fileID: 6675380878556992480}
   projectileSpeed: 5
@@ -238,6 +237,7 @@ MonoBehaviour:
   description: Shots normal eggs but cost the less, you can buy it at the start
   cost: 20
   damage: 4
+  rate: 0.25
 --- !u!114 &-4692810863185702767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -277851965
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: cbc0deddc7fe0d64cbdfb84ac5b67bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

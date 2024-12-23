@@ -5,7 +5,7 @@ using UnityEngine;
 public class DetectEnemy : MonoBehaviour
 {
     public GameObject projectilePrefab; // Projectile prefab
-    public float fireRate = 1f;         // Time between shots
+    private float fireRate;         // Time between shots
     public Transform firePoint;         // Point where projectiles are spawned
     public Cannon cannon;               // Reference to the Cannon script
     public float projectileSpeed = 5f;  // Projectile speed
@@ -15,12 +15,13 @@ public class DetectEnemy : MonoBehaviour
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private float fireCooldown = 0f;
 
-    public Tower towerScript;
+    private Tower towerScript;
 
     void Start() 
     { 
         towerScript = GetComponent<Tower>(); 
         damageAmount = towerScript.damage; // Get damage value from Tower script
+        fireRate = towerScript.rate;
     }
 
     void Update()

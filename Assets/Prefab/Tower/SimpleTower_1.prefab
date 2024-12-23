@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1407159190093633299, guid: 11e39b53b8cb1974eac0eaaab309225b, type: 3}
-  fireRate: 1
   firePoint: {fileID: 642402515659118538}
   cannon: {fileID: 4341701053332849756}
   projectileSpeed: 5
@@ -336,6 +335,7 @@ MonoBehaviour:
   description: Shots normal eggs but cost the less, you can buy it at the start
   cost: 10
   damage: 1
+  rate: 1
 --- !u!1 &9045093008452415643
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 public class Slow_Tower : MonoBehaviour
 {
-    public float slowAmount = 0.5f; // Slow factor (e.g., 0.5 = 50% speed)
+    private float slowAmount; // Slow factor (e.g., 0.5 = 50% speed)
     private List<Animal> enemiesInRange = new List<Animal>();
+
+    private Tower towerScript;
+
+    void Start() {
+        towerScript = GetComponent<Tower>(); 
+        slowAmount = towerScript.rate; 
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

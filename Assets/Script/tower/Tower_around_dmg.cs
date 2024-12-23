@@ -3,23 +3,27 @@ using UnityEngine;
 
 public class ZoneDamageTower : MonoBehaviour
 {
-    public float damageInterval = 2f; // Temps entre chaque dégâts (en secondes)
+    private float damageInterval; // Temps entre chaque dï¿½gï¿½ts (en secondes)
     private int damageAmount;
     private float damageCooldown = 0f;
-    public Tower towerScript;
+    private Tower towerScript;
 
-    public GameObject damageEffect; // Référence à l'effet visuel
+    public GameObject damageEffect; // Rï¿½fï¿½rence ï¿½ l'effet visuel
 
 
     private List<Animal> enemiesInRange = new List<Animal>(); // Liste des ennemis dans le rayon
-    void Start() { damageAmount = towerScript.damage; }
+    void Start() { 
+        towerScript = GetComponent<Tower>(); 
+        damageAmount = towerScript.damage; 
+        damageInterval = towerScript.rate; 
+    }
     void Update()
     {
-        // Gérer le cooldown pour les dégâts
+        // Gï¿½rer le cooldown pour les dï¿½gï¿½ts
         damageCooldown -= Time.deltaTime;
         if (damageCooldown <= 0f)
         {
-            TriggerDamageEffect(); // Faire apparaître l'animation
+            TriggerDamageEffect(); // Faire apparaï¿½tre l'animation
             DealDamage();
             damageCooldown = damageInterval;
         }
@@ -52,10 +56,10 @@ public class ZoneDamageTower : MonoBehaviour
         }
     }
 
-    // Infliger des dégâts à tous les ennemis dans le rayon
+    // Infliger des dï¿½gï¿½ts ï¿½ tous les ennemis dans le rayon
     private void DealDamage()
     {
-        // Parcours inversé pour éviter les erreurs lors de la suppression
+        // Parcours inversï¿½ pour ï¿½viter les erreurs lors de la suppression
         for (int i = enemiesInRange.Count - 1; i >= 0; i--)
         {
             if (enemiesInRange[i] != null)
@@ -74,9 +78,9 @@ public class ZoneDamageTower : MonoBehaviour
     {
         if (damageEffect != null)
         {
-            // Active l'effet visuel pendant une courte durée
+            // Active l'effet visuel pendant une courte durï¿½e
             damageEffect.SetActive(true);
-            Invoke("DisableDamageEffect", 0.5f); // Désactive après 0.5 secondes
+            Invoke("DisableDamageEffect", 0.5f); // Dï¿½sactive aprï¿½s 0.5 secondes
         }
     }
 

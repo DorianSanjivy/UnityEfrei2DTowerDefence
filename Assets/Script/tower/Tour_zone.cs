@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tour_zone : MonoBehaviour
 {
     public GameObject projectilePrefab; // Le prefab du projectile
-    public float fireRate = 1f; // Temps entre chaque tir
+    private float fireRate; // Temps entre chaque tir
     public Transform firePoint; // Point d'o� partent les projectiles
     public float rotationSpeed = 5f; // Vitesse de rotation vers la cible
     private Tower towerScript;
@@ -18,6 +18,7 @@ public class Tour_zone : MonoBehaviour
     void Start() 
     {
         towerScript = GetComponent<Tower>(); 
+        fireRate = towerScript.rate;
         towerSquash = GetComponent<TowerSquash>(); // Récupère le script TowerSquash
     }
 

@@ -107,7 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1231899163
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f407a29851b61dc408c6d5fc3efc7059, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6117249329766582178, guid: 4d8eac0618a5d50419fdf2f6ae68c1f2, type: 3}
-  fireRate: 1.5
   firePoint: {fileID: 8898470460592120181}
   rotationSpeed: 5
 --- !u!114 &6467615659999516200
@@ -153,6 +152,7 @@ MonoBehaviour:
     (AOE)
   cost: 30
   damage: 2
+  rate: 1.5
 --- !u!58 &8335806813332860783
 CircleCollider2D:
   m_ObjectHideFlags: 0

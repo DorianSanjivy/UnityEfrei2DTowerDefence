@@ -7,8 +7,8 @@ public class Tower : MonoBehaviour
     public string name;
     public string description;
     public int cost;
-    private int level;
     public int damage; 
+    public float rate; 
 
     // Start is called before the first frame update
     void Start()

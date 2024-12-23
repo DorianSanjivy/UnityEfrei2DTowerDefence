@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34389bfe8239ad4bbe82e1348f2b5d8, type: 3}
+  m_Name: TowerStat
+  m_EditorClassIdentifier: 
+  array:
+    gridSize: {x: 7, y: 13}
+    cellSize: {x: 82, y: 16}
+    cells:
+    - row:
+      - Tower\Stat
+      - Name_Desc
+      - Cost
+      - Damage
+      - Rate
+      - Description
+      - Damage_Desc
+    - row:
+      - SimpleTower_1
+      - Eggxterminator
+      - 10
+      - 1
+      - 1
+      - Shots normal eggs but cost the less, you can buy it at the start
+      - 1
+    - row:
+      - SimpleTower_2
+      - Eggxterminator2
+      - 15
+      - 2
+      - 0.5
+      - Shots normal eggs but cost the less, you can buy it at the start
+      - 4
+    - row:
+      - SimpleTower_3
+      - Eggxterminator3
+      - 20
+      - 4
+      - 0.25
+      - Shots normal eggs but cost the less, you can buy it at the start
+      - 8
+    - row:
+      - Spring_1
+      - Bag-art
+      - 20
+      - 2
+      - 3
+      - Throws a projectile in a long range and attacks in area of effect (AOE)
+      - 2
+    - row:
+      - Spring_2
+      - Bag-art2
+      - 30
+      - 2
+      - 1.5
+      - Throws a projectile in a long range and attacks in area of effect (AOE)
+      - 4
+    - row:
+      - Spring_3
+      - Bag-art3
+      - 40
+      - 2
+      - 0.1
+      - Throws a projectile in a long range and attacks in area of effect (AOE)
+      - 10
+    - row:
+      - Slow_tower_1
+      - Slowmill
+      - 7
+      - 0
+      - 0.7
+      - Doesn't do any damage but it slows the enemies in short range, do not put
+        this alone...
+      - 0
+    - row:
+      - Slow_tower_2
+      - Slowmill2
+      - 12
+      - 0
+      - 0.55
+      - Doesn't do any damage but it slows the enemies in short range, do not put
+        this alone...
+      - 0
+    - row:
+      - Slow_tower_3
+      - Slowmill3
+      - 25
+      - 0
+      - 0.4
+      - Doesn't do any damage but it slows the enemies in short range, do not put
+        this alone...
+      - 0
+    - row:
+      - Scarecrow_1
+      - Scratchcrow
+      - 12
+      - 1
+      - 2
+      - Scratches in a circular short range. It's perfect to put in corners
+      - 1
+    - row:
+      - Scarecrow_2
+      - Scratchcrow2
+      - 30
+      - 3
+      - 1.5
+      - Scratches in a circular short range. It's perfect to put in corners
+      - 5
+    - row:
+      - Scarecrow_3
+      - Scratchcrow3
+      - 40
+      - 5
+      - 1
+      - Scratches in a circular short range. It's perfect to put in corners
+      - 10
