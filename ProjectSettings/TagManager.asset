@@ -49,6 +49,9 @@ TagManager:
   - name: BaseLayer
     uniqueID: 2620428397
     locked: 0
+  - name: RangeLayer
+    uniqueID: 2316963689
+    locked: 0
   - name: EnemyLayer
     uniqueID: 1231899163
     locked: 0
