@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09370083, y: 0.13866442}
   m_AnchorMax: {x: 0.9363285, y: 0.31015432}
-  m_AnchoredPosition: {x: -3.5869598, y: -1.1003494}
+  m_AnchoredPosition: {x: -3.5869598, y: -1.1003723}
   m_SizeDelta: {x: 2.891899, y: 5.7815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330971311
@@ -6017,11 +6017,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6873287192887946451, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: towerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 59670c4c6667b6d41b9dc5fa30f86c32, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3941954490936370882, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 4996183995483909744}
   m_SourcePrefab: {fileID: 100100000, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+--- !u!1 &4996183995483909738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3941954490936370882, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+  m_PrefabInstance: {fileID: 4996183995483909737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4996183995483909744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996183995483909738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c14888d78c0e843ba89fc558dce3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+  - {fileID: 5741532354101464544, guid: 5ecc03e14f5f2bb4f9d7b68bee76495d, type: 3}
+  - {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
+  - {fileID: 2108115041123025395, guid: 1dbd468725dfd7f4296627c4ca6394b8, type: 3}
+  - {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+  - {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+  - {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+  - {fileID: 5741532354101464544, guid: b230ade4b21aec54fb7b96dbdb7919b6, type: 3}
+  animalStats: {fileID: 11400000, guid: b0c4a50d1ed5f0b4ab83d52894daa391, type: 2}
 --- !u!1001 &7946572909952777584
 PrefabInstance:
   m_ObjectHideFlags: 0

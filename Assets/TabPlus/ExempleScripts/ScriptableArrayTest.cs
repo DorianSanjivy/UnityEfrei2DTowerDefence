@@ -8,5 +8,4 @@ using UnityEngine;
 public class StatTab : ScriptableObject
 {
     public Array2DString array;
- 
 }

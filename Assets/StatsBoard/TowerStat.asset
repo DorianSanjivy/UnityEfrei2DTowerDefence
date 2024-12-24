@@ -25,15 +25,15 @@ MonoBehaviour:
       - Description
       - Damage_Desc
     - row:
-      - SimpleTower_1
+      - Canon1
       - Eggxterminator
       - 10
       - 1
-      - 1
+      - 1.0
       - Shots normal eggs but cost the less, you can buy it at the start
       - 1
     - row:
-      - SimpleTower_2
+      - Canon2
       - Eggxterminator2
       - 15
       - 2
@@ -41,7 +41,7 @@ MonoBehaviour:
       - Shots normal eggs but cost the less, you can buy it at the start
       - 4
     - row:
-      - SimpleTower_3
+      - Canon3
       - Eggxterminator3
       - 20
       - 4
@@ -49,15 +49,15 @@ MonoBehaviour:
       - Shots normal eggs but cost the less, you can buy it at the start
       - 8
     - row:
-      - Spring_1
+      - Barrel1
       - Bag-art
       - 20
       - 2
-      - 3
+      - 3.0
       - Throws a projectile in a long range and attacks in area of effect (AOE)
       - 2
     - row:
-      - Spring_2
+      - Barrel2
       - Bag-art2
       - 30
       - 2
@@ -65,7 +65,7 @@ MonoBehaviour:
       - Throws a projectile in a long range and attacks in area of effect (AOE)
       - 4
     - row:
-      - Spring_3
+      - Barrel3
       - Bag-art3
       - 40
       - 2
@@ -73,7 +73,7 @@ MonoBehaviour:
       - Throws a projectile in a long range and attacks in area of effect (AOE)
       - 10
     - row:
-      - Slow_tower_1
+      - Wind1
       - Slowmill
       - 7
       - 0
@@ -82,7 +82,7 @@ MonoBehaviour:
         this alone...
       - 0
     - row:
-      - Slow_tower_2
+      - Wind2
       - Slowmill2
       - 12
       - 0
@@ -91,7 +91,7 @@ MonoBehaviour:
         this alone...
       - 0
     - row:
-      - Slow_tower_3
+      - Wind3
       - Slowmill3
       - 25
       - 0
@@ -100,15 +100,15 @@ MonoBehaviour:
         this alone...
       - 0
     - row:
-      - Scarecrow_1
+      - Zone1
       - Scratchcrow
       - 12
       - 1
-      - 2
+      - 2.0
       - Scratches in a circular short range. It's perfect to put in corners
       - 1
     - row:
-      - Scarecrow_2
+      - Zone2
       - Scratchcrow2
       - 30
       - 3
@@ -116,10 +116,10 @@ MonoBehaviour:
       - Scratches in a circular short range. It's perfect to put in corners
       - 5
     - row:
-      - Scarecrow_3
+      - Zone3
       - Scratchcrow3
       - 40
       - 5
-      - 1
+      - 1.0
       - Scratches in a circular short range. It's perfect to put in corners
       - 10

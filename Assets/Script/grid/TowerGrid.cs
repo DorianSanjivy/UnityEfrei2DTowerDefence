@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Globalization;
 
 public class TowerGrid : MonoBehaviour
 {
@@ -24,13 +25,16 @@ public class TowerGrid : MonoBehaviour
         { "Zone1", 6 },
         { "Zone2", 7 },
         { "Zone3", 8 },
-        { "Spring1", 9 },
-        { "Spring2", 10 },
-        { "Spring3", 11 },
+        { "Barrel1", 9 },
+        { "Barrel2", 10 },
+        { "Barrel3", 11 },
         { "MaxHP1", 12 },
         { "MaxHP2", 13 },
         { "MaxHP3", 14 }
     };
+
+    [SerializeField]
+    private StatTab towerStats;
 
     private Dictionary<string, int> roadMapping = new Dictionary<string, int>
     {
@@ -70,7 +74,41 @@ public class TowerGrid : MonoBehaviour
         // Spawn roads
         SpawnRoads();
         testArray.ToString2DDebugLog();
+
+        // Loop through the grid
+        for (int y = 0; y < towerStats.array.GridSize.y; y++)
+        {
+            string cellValue = towerStats.array.GetCell(0, y);
+            // Check if the cellValue exists in the towerMapping
+            if (towerMapping.ContainsKey(cellValue))
+            {
+                int towerIndex = towerMapping[cellValue];
+                GameObject towerPrefab = towerPrefabs[towerIndex];
+
+                // Modify the stats of the tower prefab
+                Tower towerComponent = towerPrefab.GetComponent<Tower>();
+                if (towerComponent != null)
+                {
+                    UpdateTowerStats(towerComponent, y);
+                }
+                else
+                {
+                    Debug.LogWarning($"Tower prefab for {cellValue} does not have a Tower component.");
+                }
+            }
+        }
     }
+
+    void UpdateTowerStats(Tower tower, int y)
+    {
+        tower.name = towerStats.array.GetCell(1,y);
+        tower.cost = int.Parse(towerStats.array.GetCell(2,y));
+        tower.damage = int.Parse(towerStats.array.GetCell(3,y));
+        tower.rate = float.Parse(towerStats.array.GetCell(4,y), CultureInfo.InvariantCulture);
+        tower.description = towerStats.array.GetCell(5,y);
+        tower.description_damage = int.Parse(towerStats.array.GetCell(6,y));
+    }
+
 
     void SpawnRoads()
     {

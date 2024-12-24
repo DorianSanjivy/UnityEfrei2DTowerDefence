@@ -146,7 +146,7 @@ public class ButtonHoverInfo : MonoBehaviour
         if (prefabInfo != null && infoText != null)
         {
             // Génère une description à partir des données du prefab
-            string description = $"{prefabInfo.name}\n\nCoût: {prefabInfo.cost}\n\nDégâts: {prefabInfo.damage}\n\nDescription: \n{prefabInfo.description}";
+            string description = $"{prefabInfo.name}\n\nCoût: {prefabInfo.cost}\n\nDégâts: {prefabInfo.description_damage}\n\nDescription: \n{prefabInfo.description}";
             infoText.text = description;
         }
         else
@@ -195,7 +195,7 @@ public class ButtonHoverInfo : MonoBehaviour
                 // Update the description text
                 if (infoText != null)
                 {
-                    string description = $"{towerInfo.name}\n\nCoût: {towerInfo.cost}\n\nDégâts: {towerInfo.damage}\n\nDescription: \n{towerInfo.description}";
+                    string description = $"{towerInfo.name}\n\nCoût: {towerInfo.cost}\n\nDégâts: {towerInfo.description_damage}\n\nDescription: \n{towerInfo.description}";
                     infoText.text = description;
                 }
             }

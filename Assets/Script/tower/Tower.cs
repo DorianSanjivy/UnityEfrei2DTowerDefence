@@ -6,6 +6,7 @@ public class Tower : MonoBehaviour
 {   
     public string name;
     public string description;
+    public int description_damage;
     public int cost;
     public int damage; 
     public float rate; 
