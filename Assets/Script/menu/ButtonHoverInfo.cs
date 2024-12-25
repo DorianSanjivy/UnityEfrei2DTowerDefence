@@ -110,7 +110,7 @@ public class ButtonHoverInfo : MonoBehaviour
 
             // Ajouter les événements
             AddEvent(trigger, EventTriggerType.PointerEnter, () => ShowDescription(index));
-            AddEvent(trigger, EventTriggerType.PointerExit, HideDescription);
+            
         }
     }
 
@@ -146,7 +146,7 @@ public class ButtonHoverInfo : MonoBehaviour
         if (prefabInfo != null && infoText != null)
         {
             // Génère une description à partir des données du prefab
-            string description = $"{prefabInfo.name}\n\nCoût: {prefabInfo.cost}\n\nDégâts: {prefabInfo.description_damage}\n\nDescription: \n{prefabInfo.description}";
+            string description = $"{prefabInfo.name}\n\nCost: {prefabInfo.cost}\n\nDamage: {prefabInfo.description_damage}\n\nDescription: \n{prefabInfo.description}";
             infoText.text = description;
         }
         else
@@ -175,7 +175,6 @@ public class ButtonHoverInfo : MonoBehaviour
         if (hit != null && hit.CompareTag("Range"))
         {
             Tower towerInfo = hit.GetComponentInParent<Tower>();
-            Debug.Log("a");
             if (towerInfo != null)
             {
                 if (currentlyHoveredTower != towerInfo)
@@ -196,7 +195,7 @@ public class ButtonHoverInfo : MonoBehaviour
                 // Met à jour le texte de la description
                 if (infoText != null)
                 {
-                    string description = $"{towerInfo.name}\n\nCoût: {towerInfo.cost}\n\nDégâts: {towerInfo.description_damage}\n\nDescription: \n{towerInfo.description}";
+                    string description = $"{towerInfo.name}\n\nUpgrade: {towerInfo.upgrade}\n\nDamage: {towerInfo.description_damage}\n\nDescription: \n{towerInfo.description}";
                     infoText.text = description;
                 }
             }
@@ -209,9 +208,6 @@ public class ButtonHoverInfo : MonoBehaviour
                 ToggleRange(currentlyHoveredTower, false);
                 currentlyHoveredTower = null;
             }
-
-            // Vide la description
-            HideDescription();
         }
     }
 

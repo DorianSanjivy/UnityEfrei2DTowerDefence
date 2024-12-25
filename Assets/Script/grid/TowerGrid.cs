@@ -107,6 +107,28 @@ public class TowerGrid : MonoBehaviour
         tower.rate = float.Parse(towerStats.array.GetCell(4,y), CultureInfo.InvariantCulture);
         tower.description = towerStats.array.GetCell(5,y);
         tower.description_damage = int.Parse(towerStats.array.GetCell(6,y));
+
+        // Calculate the upgrade cost based on the next level
+        string currentTowerName = towerStats.array.GetCell(0,y);
+        if (currentTowerName.Length > 1 && char.IsDigit(currentTowerName[^1]))
+        {
+            int currentLevel = int.Parse(currentTowerName[^1].ToString());
+            string nextTowerName = currentTowerName.Substring(0, currentTowerName.Length - 1) + (currentLevel + 1);
+
+            if (towerMapping.ContainsKey(nextTowerName))
+            {
+                int nextTowerIndex = towerMapping[nextTowerName];
+                tower.upgrade = towerPrefabs[nextTowerIndex].GetComponent<Tower>().cost;
+            }
+            else
+            {
+                tower.upgrade = 999; // No upgrade available
+            }
+        }
+        else
+        {
+            tower.upgrade = 0; // No valid level to upgrade
+        }
     }
 
 

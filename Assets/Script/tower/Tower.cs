@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     public string description;
     public int description_damage;
     public int cost;
+    public int upgrade = 0;
     public int damage; 
     public float rate; 
 
