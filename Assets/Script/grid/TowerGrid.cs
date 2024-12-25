@@ -189,13 +189,13 @@ public class TowerGrid : MonoBehaviour
                 UpgradeTower();
             }
         }
-        /*
+        
         if (activate != previousActivateState)
         {
             PauseUnpauseGame();
             previousActivateState = activate;
         }
-        */
+        
     }
 
     public void ToggleActivate(){
