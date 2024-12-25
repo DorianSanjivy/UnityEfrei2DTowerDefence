@@ -142,14 +142,6 @@ public class TowerGrid : MonoBehaviour
 
     void Update()
     {
-
-        // Debug
-        if (Input.GetKeyDown(KeyCode.Alpha1)) selectedTowerIndex = "Wind"; // Wind Tower
-        if (Input.GetKeyDown(KeyCode.Alpha2)) selectedTowerIndex = "Slow"; // Slow Tower
-        if (Input.GetKeyDown(KeyCode.Alpha3)) selectedTowerIndex = "Zone"; // Zone Tower
-        if (Input.GetKeyDown(KeyCode.Alpha4)) selectedTowerIndex = "Big"; // Big Tower
-        if (Input.GetKeyDown(KeyCode.Alpha5)) selectedTowerIndex = "MaxHP"; // MaxHP Tower
-
         selectedTowerIndex = buttonSelection.selectedTower + "1";
 
         if (Input.GetMouseButtonDown(0)) // Left mouse button

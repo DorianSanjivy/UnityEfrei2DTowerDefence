@@ -88,7 +88,7 @@ public class ButtonHoverInfo : MonoBehaviour
 {
     [Header("UI Settings")]
     public List<Button> buttons = new List<Button>(); // Liste des boutons
-    public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associ�s
+    public List<GameObject> prefabs = new List<GameObject>(); // Liste des prefabs associés
     public TextMeshProUGUI infoText; // Texte du panneau Info_panel (TMP)
 
     private Tower currentlyHoveredTower = null;
@@ -116,8 +116,8 @@ public class ButtonHoverInfo : MonoBehaviour
 
     void Update()
     {
-        // Vérifier si la souris survole un objet avec le script Tower
-        CheckHoverOverTower();
+        // Vérifier si la souris survole un objet avec un Collider2D de "range"
+        CheckHoverOverTowerRange();
     }
 
     EventTrigger AddEventTrigger(Button button)
@@ -164,35 +164,36 @@ public class ButtonHoverInfo : MonoBehaviour
         }
     }
 
-    void CheckHoverOverTower()
+    void CheckHoverOverTowerRange()
     {
         // Récupère la position de la souris dans le monde 2D
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // Vérifie s'il y a un collider à cet endroit
+        // Vérifie s'il y a un Collider2D de "range" à cet endroit
         Collider2D hit = Physics2D.OverlapPoint(mousePosition);
 
-        if (hit != null)
+        if (hit != null && hit.CompareTag("Range"))
         {
-            Tower towerInfo = hit.GetComponent<Tower>();
+            Tower towerInfo = hit.GetComponentInParent<Tower>();
+            Debug.Log("a");
             if (towerInfo != null)
             {
                 if (currentlyHoveredTower != towerInfo)
                 {
-                    // Deactivate the range of the previously hovered tower
+                    // Désactive la range de la tour précédente
                     if (currentlyHoveredTower != null)
                     {
                         ToggleRange(currentlyHoveredTower, false);
                     }
 
-                    // Update the currently hovered tower
+                    // Met à jour la tour actuellement survolée
                     currentlyHoveredTower = towerInfo;
 
-                    // Activate the range of the new tower
+                    // Active la range de la nouvelle tour
                     ToggleRange(currentlyHoveredTower, true);
                 }
 
-                // Update the description text
+                // Met à jour le texte de la description
                 if (infoText != null)
                 {
                     string description = $"{towerInfo.name}\n\nCoût: {towerInfo.cost}\n\nDégâts: {towerInfo.description_damage}\n\nDescription: \n{towerInfo.description}";
@@ -202,14 +203,14 @@ public class ButtonHoverInfo : MonoBehaviour
         }
         else
         {
-            // If no tower is hovered, deactivate the range of the last hovered tower
+            // Si aucune tour n'est survolée, désactive la range de la dernière tour survolée
             if (currentlyHoveredTower != null)
             {
                 ToggleRange(currentlyHoveredTower, false);
                 currentlyHoveredTower = null;
             }
 
-            // Clear the description
+            // Vide la description
             HideDescription();
         }
     }
@@ -219,7 +220,15 @@ public class ButtonHoverInfo : MonoBehaviour
         Transform range = tower.transform.Find("Range");
         if (range != null)
         {
-            range.gameObject.SetActive(isActive);
+            SpriteRenderer spriteRenderer = range.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.enabled = isActive;
+            }
+            else
+            {
+                Debug.LogWarning($"Tower {tower.name} does not have a SpriteRenderer on its 'Range' child!");
+            }
         }
         else
         {
