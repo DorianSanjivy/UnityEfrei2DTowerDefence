@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Wave7
   m_EditorClassIdentifier: 
   waveSteps:
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
     spawnInterval: 0
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
     spawnInterval: 2
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
     spawnInterval: 0
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 18b571935a674804391501458b3dc708, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
     spawnInterval: 2
   - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
     spawnInterval: 0

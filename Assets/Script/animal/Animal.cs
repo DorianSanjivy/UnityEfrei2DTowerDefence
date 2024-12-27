@@ -21,6 +21,8 @@ public class Animal : MonoBehaviour
     private Transform lifeBarForeground; // Reference to the foreground child of the life bar
     private Vector3 lifeBarOffset = new Vector3(0, 1.5f, 0); // Offset for the life bar above the object
 
+    public GameObject[] spawnOnDeath; // Enemies to spawn when this enemy dies
+
     protected Transform[] pathNodes;
     protected int currentNodeIndex = 0;
 
@@ -43,6 +45,11 @@ public class Animal : MonoBehaviour
     public void SetPath(Transform[] nodes)
     {
         pathNodes = nodes;
+    }
+
+    public void SetStartingNode(int nodeIndex)
+    {
+        currentNodeIndex = nodeIndex; // Start from the specified node
     }
 
     protected virtual void Update()
@@ -149,12 +156,68 @@ public class Animal : MonoBehaviour
 
     protected virtual void Die()
     {
+
+        // Notify the WaveManager that this enemy has died
+        if (WaveManager.Instance != null)
+        {
+            WaveManager.Instance.OnEnemyDestroyed(gameObject);
+        }
+
         // Instantiate coins around the object
         for (int i = 0; i < moneyDrop; i++)
         {
             Vector2 randomPosition = Random.insideUnitCircle * dropRadius;
             Vector3 spawnPosition = new Vector3(transform.position.x + randomPosition.x, transform.position.y + randomPosition.y, transform.position.z);
             Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+        }
+
+        if (speed < 2){
+            // Spawn additional enemies
+            float baseDistance = 2f; // Base distance behind the death point
+            float distanceIncrement = 1f; // Additional distance for each subsequent spawn
+
+            for (int spawnIndex = 0; spawnIndex < spawnOnDeath.Length; spawnIndex++)
+            {
+                // Calculate the spawn position for the current enemy
+                float spawnDistance = baseDistance + spawnIndex * distanceIncrement;
+                Vector3 spawnPosition = GetPositionBeforeDeath(spawnDistance);
+
+                GameObject spawnedEnemy = Instantiate(spawnOnDeath[spawnIndex], spawnPosition, Quaternion.identity);
+
+                // Notify the WaveManager
+                if (WaveManager.Instance != null)
+                {
+                    WaveManager.Instance.OnEnemySpawned(spawnedEnemy);
+                }
+
+                // Set the path and starting node for the spawned enemy
+                if (spawnedEnemy.TryGetComponent(out Animal spawnedAnimal))
+                {
+                    spawnedAnimal.SetPath(pathNodes); // Pass the same path
+                    spawnedAnimal.SetStartingNode(currentNodeIndex); // Start from the current node
+                }
+            }
+        }
+
+        if (speed >= 2){
+            // Spawn additional enemies
+            foreach (GameObject spawnPrefab in spawnOnDeath)
+            {
+                GameObject spawnedEnemy = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
+
+                // Notify the WaveManager
+                if (WaveManager.Instance != null)
+                {
+                    WaveManager.Instance.OnEnemySpawned(spawnedEnemy);
+                }
+
+                // Set the path and starting node for the spawned enemy
+                if (spawnedEnemy.TryGetComponent(out Animal spawnedAnimal))
+                {
+                    spawnedAnimal.SetPath(pathNodes); // Pass the same path
+                    spawnedAnimal.SetStartingNode(currentNodeIndex); // Start from the current node
+                }
+            }
         }
 
         // Destroy the life bar
@@ -164,5 +227,33 @@ public class Animal : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private Vector3 GetPositionBeforeDeath(float distance)
+    {
+        if (pathNodes == null || pathNodes.Length == 0) return transform.position;
+
+        float remainingDistance = distance;
+        Vector3 spawnPosition = transform.position;
+
+        // Traverse the path backwards to find the spawn position
+        for (int i = currentNodeIndex; i > 0; i--)
+        {
+            Vector3 currentNode = pathNodes[i].position;
+            Vector3 previousNode = pathNodes[i - 1].position;
+
+            float segmentLength = Vector3.Distance(currentNode, previousNode);
+
+            if (remainingDistance <= segmentLength)
+            {
+                // Calculate the exact position along this segment
+                spawnPosition = Vector3.Lerp(currentNode, previousNode, remainingDistance / segmentLength);
+                break;
+            }
+
+            remainingDistance -= segmentLength;
+        }
+
+        return spawnPosition;
     }
 }

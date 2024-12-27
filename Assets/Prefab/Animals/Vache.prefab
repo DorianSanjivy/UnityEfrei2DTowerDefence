@@ -128,7 +128,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5741532354101464544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -188,10 +188,11 @@ MonoBehaviour:
   speed: 1.2
   health: 20
   damage: 8
-  moneyDrop: 4
+  moneyDrop: 5
   coinPrefab: {fileID: 2588204975628622341, guid: 9d8dea4611ed0384a960aa007a9cd44d, type: 3}
   dropRadius: 1
   lifeBarPrefab: {fileID: 649994158534550227, guid: 06533d223f653b34c8926444d44c5456, type: 3}
+  spawnOnDeath: []
 --- !u!114 &6536601690676483553
 MonoBehaviour:
   m_ObjectHideFlags: 0

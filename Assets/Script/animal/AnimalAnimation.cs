@@ -34,6 +34,8 @@ public class AnimalAnimation : MonoBehaviour
 
             // Reset the timer
             timer = 0f;
+
+            spriteRenderer.enabled = true;
         }
     }
 }

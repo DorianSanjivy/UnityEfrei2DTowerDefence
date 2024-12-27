@@ -12,6 +12,20 @@ public class WaveManager : MonoBehaviour
     private List<GameObject> activeEnemies = new List<GameObject>(); // Suivi des ennemis actifs
     private bool stopSpawning = false; // Permet d'arrêter le spawn des vagues
 
+    public static WaveManager Instance { get; private set; } // Singleton for global access
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         StartCoroutine(SpawnWaves());
@@ -94,5 +108,17 @@ public class WaveManager : MonoBehaviour
             }
         }
         activeEnemies.Clear(); // Vider la liste
+    }
+
+    // Called when an enemy is spawned
+    public void OnEnemySpawned(GameObject enemy)
+    {
+        activeEnemies.Add(enemy);
+    }
+
+    // Called when an enemy is destroyed
+    public void OnEnemyDestroyed(GameObject enemy)
+    {
+        activeEnemies.Remove(enemy);
     }
 }
