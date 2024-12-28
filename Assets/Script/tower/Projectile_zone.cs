@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile_zone : MonoBehaviour
 {
     public float speed = 5f;             // Projectile speed
-    private int damage;                  // Damage inflicted
+    private float damage;                  // Damage inflicted
     public float explosionRadius = 2f;   // Explosion radius
     public GameObject explosionEffect;   // Optional visual effect for explosion
 
@@ -25,7 +25,7 @@ public class Projectile_zone : MonoBehaviour
     private float lifetime = 10f;        // Projectile lifetime
     private float timeAlive = 0f;        // Time since launch
 
-    public void SetDamage(int newDamage) { damage = newDamage; }
+    public void SetDamage(float newDamage) { damage = newDamage; }
 
     void Start()
     {

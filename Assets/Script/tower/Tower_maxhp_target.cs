@@ -6,13 +6,13 @@ using UnityEngine;
 public class Tower_maxhp_target : MonoBehaviour
 {
     public GameObject projectilePrefab; // Le prefab du projectile
-    public Transform firePoint;         // Point d'où partent les projectiles
+    public Transform firePoint;         // Point d'oï¿½ partent les projectiles
     public float fireRate = 1f;
     public float burstDelay = 0.2f;// Temps entre chaque tir
     private Tower towerScript;
     private float fireCooldown = 0f;    // Cooldown pour les tirs
     private List<Animal> enemiesInRange = new List<Animal>();
-
+    /*
     void Start() { towerScript = GetComponent<Tower>();  }
 
 
@@ -26,13 +26,13 @@ public class Tower_maxhp_target : MonoBehaviour
             if (target != null)
             {
                 StartCoroutine(FireBurst(target.gameObject)); // Lancer les 3 tirs
-                fireCooldown = fireRate; // Réinitialiser le cooldown
+                fireCooldown = fireRate; // Rï¿½initialiser le cooldown
                 
             }
         }
     }
 
-    // Sélectionner l'ennemi avec le plus de PV
+    // Sï¿½lectionner l'ennemi avec le plus de PV
     private Animal GetTargetWithHighestHealth()
     {
         Animal bestTarget = null;
@@ -54,7 +54,7 @@ public class Tower_maxhp_target : MonoBehaviour
         for (int i = 0; i < 3; i++) // Tirer 3 fois
         {
             Shoot(target); // Tirer sur la cible
-            yield return new WaitForSeconds(burstDelay); // Délai entre les tirs
+            yield return new WaitForSeconds(burstDelay); // Dï¿½lai entre les tirs
         }
     }
     private void Shoot(GameObject target)
@@ -95,4 +95,5 @@ public class Tower_maxhp_target : MonoBehaviour
             }
         }
     }
+    */
 }

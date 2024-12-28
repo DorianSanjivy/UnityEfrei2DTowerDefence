@@ -15,7 +15,7 @@ public class DetectEnemy : MonoBehaviour
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private float fireCooldown = 0f;
     private float targetSwitchCooldown = 0f; // Cooldown for switching targets
-    public float targetSwitchCooldownDuration = 2f; // Duration of the switch cooldown
+    public float targetSwitchCooldownDuration = 0.1f; // Duration of the switch cooldown
 
     private Tower towerScript;
     private GameObject currentTarget; // Keep track of the current target
@@ -42,8 +42,6 @@ public class DetectEnemy : MonoBehaviour
             {
                 currentTarget = target;
                 targetSwitchCooldown = targetSwitchCooldownDuration; // Reset switch cooldown
-                cannon.AimAt(null); // Clear the aim temporarily
-                return; // Skip firing for this frame
             }
 
             // Only aim and fire if switch cooldown is complete
@@ -71,7 +69,8 @@ public class DetectEnemy : MonoBehaviour
             fireCooldown -= Time.deltaTime;
 
         if (targetSwitchCooldown > 0f)
-            targetSwitchCooldown -= Time.deltaTime;
+            targetSwitchCooldown -= Time.deltaTime*1.75f;
+            Debug.Log(targetSwitchCooldown);
     }
 
     private void Shoot(GameObject target)
