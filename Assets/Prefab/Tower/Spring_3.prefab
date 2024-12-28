@@ -114,7 +114,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.009358436, y: 0.0030417815}
@@ -283,6 +283,7 @@ MonoBehaviour:
     (AOE)
   description_damage: 10
   cost: 40
+  upgrade: 0
   damage: 2
   rate: 0.1
 --- !u!58 &6384977667385306002

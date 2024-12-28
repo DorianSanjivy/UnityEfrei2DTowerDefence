@@ -260,7 +260,7 @@ public class TowerGrid : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
+            Time.timeScale = 0.1f;
             isPaused = true;
         }
     }

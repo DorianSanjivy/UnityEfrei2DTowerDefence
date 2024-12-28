@@ -114,7 +114,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00000017881393, y: 0.024947792}
@@ -380,6 +380,7 @@ MonoBehaviour:
   description: Shots normal eggs but cost the less, you can buy it at the start
   description_damage: 1
   cost: 10
+  upgrade: 0
   damage: 1
   rate: 1
 --- !u!1 &9045093008452415643

@@ -67,6 +67,7 @@ MonoBehaviour:
     not put this alone...
   description_damage: 0
   cost: 12
+  upgrade: 0
   damage: 0
   rate: 0.55
 --- !u!58 &754165403273674020
@@ -316,7 +317,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000122487545, y: -0.045508385}

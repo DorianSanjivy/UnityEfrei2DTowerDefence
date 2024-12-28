@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5843591276730133016}
   - component: {fileID: 2843149213203623955}
   m_Layer: 0
-  m_Name: PouletPreDead
+  m_Name: PouletV2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

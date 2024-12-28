@@ -237,6 +237,7 @@ MonoBehaviour:
   description: Shots normal eggs but cost the less, you can buy it at the start
   description_damage: 8
   cost: 20
+  upgrade: 0
   damage: 4
   rate: 0.25
 --- !u!114 &-4692810863185702767
@@ -465,7 +466,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.004668087, y: 0.01561112}

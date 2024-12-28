@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AnimalStat
   m_EditorClassIdentifier: 
   array:
-    gridSize: {x: 5, y: 9}
+    gridSize: {x: 5, y: 11}
     cellSize: {x: 64, y: 16}
     cells:
     - row:
@@ -45,7 +45,7 @@ MonoBehaviour:
       - 1.5
       - 20
       - 5
-      - 8
+      - 12
     - row:
       - Poulet
       - 3
@@ -57,7 +57,7 @@ MonoBehaviour:
       - 4
       - 10
       - 5
-      - 8
+      - 12
     - row:
       - Vache
       - 1.2
@@ -70,3 +70,15 @@ MonoBehaviour:
       - 70
       - 20
       - 12
+    - row:
+      - MinipiouV2
+      - 3
+      - 7
+      - 4
+      - 1
+    - row:
+      - PouletV2
+      - 3
+      - 12
+      - 10
+      - 0

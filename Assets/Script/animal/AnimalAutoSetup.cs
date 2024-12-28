@@ -17,7 +17,9 @@ public class AnimalAutoSetup : MonoBehaviour
         { "Poulet", 4 },
         { "PouletALT", 5 },
         { "Vache", 6 },
-        { "VacheALT", 7 }
+        { "VacheALT", 7 },
+        { "MinipiouV2", 8 },
+        { "PouletV2", 9 }
     };
 
     [SerializeField]
@@ -57,11 +59,5 @@ public class AnimalAutoSetup : MonoBehaviour
         animal.health = int.Parse(animalStats.array.GetCell(2,y));
         animal.damage = int.Parse(animalStats.array.GetCell(3,y));
         animal.moneyDrop = int.Parse(animalStats.array.GetCell(4,y));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

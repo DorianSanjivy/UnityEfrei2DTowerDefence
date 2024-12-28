@@ -67,6 +67,7 @@ MonoBehaviour:
   description: Scratches in a circular short range. It's perfect to put in corners
   description_damage: 5
   cost: 30
+  upgrade: 0
   damage: 3
   rate: 1.5
 --- !u!58 &-594753887136644672
@@ -316,7 +317,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.014064908, y: -0.05425416}
