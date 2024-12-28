@@ -15,9 +15,11 @@ MonoBehaviour:
   waveSteps:
   - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
     spawnInterval: 4
-  - enemyPrefab: {fileID: 5741532354101464544, guid: bb951886efa43434e97a73b4132d9936, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
     spawnInterval: 4
-  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
     spawnInterval: 4
-  - enemyPrefab: {fileID: 5741532354101464544, guid: 1ff03f8c02a127f409871067dfa48448, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
+    spawnInterval: 4
+  - enemyPrefab: {fileID: 5741532354101464544, guid: 30e4cf63d69956241a93793dd6e52792, type: 3}
     spawnInterval: 4

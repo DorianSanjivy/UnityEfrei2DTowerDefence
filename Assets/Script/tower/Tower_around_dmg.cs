@@ -9,9 +9,10 @@ public class ZoneDamageTower : MonoBehaviour
     private Tower towerScript;
 
     public GameObject damageEffect; // R�f�rence � l'effet visuel
-
-
     private List<Animal> enemiesInRange = new List<Animal>(); // Liste des ennemis dans le rayon
+
+    private bool countdownActive = false; // To track if the countdown is active
+
     void Start() { 
         towerScript = GetComponent<Tower>(); 
         damageAmount = towerScript.damage; 
@@ -19,13 +20,35 @@ public class ZoneDamageTower : MonoBehaviour
     }
     void Update()
     {
-        // G�rer le cooldown pour les d�g�ts
-        damageCooldown -= Time.deltaTime;
-        if (damageCooldown <= 0f)
+        // Progress the cooldown timer
+        if (countdownActive)
         {
-            TriggerDamageEffect(); // Faire appara�tre l'animation
-            DealDamage();
-            damageCooldown = damageInterval;
+            damageCooldown -= Time.deltaTime;
+
+            if (damageCooldown <= 0f)
+            {
+                TriggerDamageEffect(); // Show the animation
+                DealDamage();
+
+                // Reset countdownActive and check for enemies
+                countdownActive = false;
+
+                // If enemies are still in range, immediately reactivate the countdown
+                if (enemiesInRange.Count > 0)
+                {
+                    countdownActive = true;
+                    damageCooldown = damageInterval; // Reset cooldown
+                }
+            }
+        }
+        else
+        {
+            // If there are enemies and countdown is inactive, start it
+            if (enemiesInRange.Count > 0)
+            {
+                countdownActive = true;
+                damageCooldown = damageInterval; // Start the countdown
+            }
         }
     }
 
@@ -37,8 +60,15 @@ public class ZoneDamageTower : MonoBehaviour
             Animal enemyHealth = other.GetComponent<Animal>();
             if (enemyHealth != null && !enemiesInRange.Contains(enemyHealth))
             {
-                Debug.Log("hp :" + enemyHealth);
+                Debug.Log("Enemy entered: " + enemyHealth);
                 enemiesInRange.Add(enemyHealth);
+
+                // Start the countdown if it's not already active
+                if (!countdownActive)
+                {
+                    countdownActive = true;
+                    damageCooldown = damageInterval; // Start the initial countdown
+                }
             }
         }
     }

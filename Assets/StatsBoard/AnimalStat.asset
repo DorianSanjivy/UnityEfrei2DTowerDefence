@@ -27,47 +27,47 @@ MonoBehaviour:
       - 1
       - 7
       - 5
-      - 3
+      - 2
     - row:
       - CochonALT
       - 0.5
-      - 40
+      - 60
       - 10
       - 8
     - row:
       - Minipiou
       - 2
+      - 4
       - 3
-      - 2
       - 1
     - row:
       - Multipiou
       - 1.5
       - 20
-      - 5
-      - 12
+      - 10
+      - 4
     - row:
       - Poulet
       - 3
       - 5
-      - 2
       - 3
+      - 2
     - row:
       - PouletALT
-      - 4
+      - 5
       - 10
       - 5
-      - 12
+      - 8
     - row:
       - Vache
       - 1.2
-      - 40
+      - 60
       - 8
       - 10
     - row:
       - VacheALT
-      - 1.5
-      - 70
+      - 1.75
+      - 180
       - 20
       - 20
     - row:
@@ -79,6 +79,6 @@ MonoBehaviour:
     - row:
       - PouletV2
       - 3
-      - 12
+      - 18
       - 10
       - 0
