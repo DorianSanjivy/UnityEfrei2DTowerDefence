@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.004, y: 0.209, z: -0.33333334}
-  m_LocalScale: {x: 1.3993334, y: 1.3993334, z: 1.3993334}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 15388662580513455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -282,10 +282,10 @@ MonoBehaviour:
   description: Throws a projectile in a long range and attacks in area of effect
     (AOE)
   description_damage: 2
-  cost: 20
-  upgrade: 0
-  damage: 2
-  rate: 3
+  cost: 5
+  upgrade: 20
+  damage: 1
+  rate: 2
 --- !u!58 &6493517067753004875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -318,9 +318,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2}
+  m_Offset: {x: 0.011972904, y: 0.19999997}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.8556488
 --- !u!114 &-4159884150137893648
 MonoBehaviour:
   m_ObjectHideFlags: 0

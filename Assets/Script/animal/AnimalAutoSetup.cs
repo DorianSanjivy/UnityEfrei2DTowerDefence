@@ -56,7 +56,7 @@ public class AnimalAutoSetup : MonoBehaviour
     void UpdateAnimalStats(Animal animal, int y)
     {
         animal.speed = float.Parse(animalStats.array.GetCell(1,y), CultureInfo.InvariantCulture);
-        animal.health = int.Parse(animalStats.array.GetCell(2,y));
+        animal.health = float.Parse(animalStats.array.GetCell(2,y), CultureInfo.InvariantCulture);
         animal.damage = int.Parse(animalStats.array.GetCell(3,y));
         animal.moneyDrop = int.Parse(animalStats.array.GetCell(4,y));
     }

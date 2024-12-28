@@ -31,7 +31,7 @@ MonoBehaviour:
     spawnInterval: 0.5
   - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
     spawnInterval: 0.5
-  - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
+  - enemyPrefab: {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
     spawnInterval: 0.2
   - enemyPrefab: {fileID: 5741532354101464544, guid: fadf99b4bc23a8748abdd2cf0d14dba2, type: 3}
     spawnInterval: 1

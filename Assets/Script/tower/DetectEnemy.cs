@@ -10,7 +10,7 @@ public class DetectEnemy : MonoBehaviour
     public Cannon cannon;               // Reference to the Cannon script
     public float projectileSpeed = 5f;  // Projectile speed
 
-    private int damageAmount;
+    private float damageAmount;
 
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private float fireCooldown = 0f;

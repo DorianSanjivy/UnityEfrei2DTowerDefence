@@ -103,7 +103,7 @@ public class TowerGrid : MonoBehaviour
     {
         tower.name = towerStats.array.GetCell(1,y);
         tower.cost = int.Parse(towerStats.array.GetCell(2,y));
-        tower.damage = int.Parse(towerStats.array.GetCell(3,y));
+        tower.damage = float.Parse(towerStats.array.GetCell(3,y), CultureInfo.InvariantCulture);
         tower.rate = float.Parse(towerStats.array.GetCell(4,y), CultureInfo.InvariantCulture);
         tower.description = towerStats.array.GetCell(5,y);
         tower.description_damage = int.Parse(towerStats.array.GetCell(6,y));

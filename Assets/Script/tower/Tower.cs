@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     public int description_damage;
     public int cost;
     public int upgrade = 0;
-    public int damage; 
+    public float damage; 
     public float rate; 
 
     // Start is called before the first frame update

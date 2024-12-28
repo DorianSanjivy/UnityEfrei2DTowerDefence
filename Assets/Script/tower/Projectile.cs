@@ -4,7 +4,7 @@ using System.Collections;
 public class Projectile : MonoBehaviour
 {
     public float speed = 5f;          // Speed of the projectile
-    private int damage;              // Damage dealt
+    private float damage;              // Damage dealt
     private Vector3 moveDirection;   // Movement direction
     private GameObject target;
 
@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
         target = newTarget;
     }
 
-    public void SetDamage(int newDamage)
+    public void SetDamage(float newDamage)
     {
         damage = newDamage;
     }

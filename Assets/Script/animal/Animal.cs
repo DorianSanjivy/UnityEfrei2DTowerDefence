@@ -8,8 +8,8 @@ public class Animal : MonoBehaviour
     private List<float> activeSlowFactors = new List<float>();
     private bool isSlowed = false;
 
-    public int health;
-    private int maxHealth;
+    public float health;
+    private float maxHealth;
     public int damage;
 
     public int moneyDrop;
@@ -79,7 +79,7 @@ public class Animal : MonoBehaviour
         }
     }
 
-    public virtual void TakeDamage(int damageAmount)
+    public virtual void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
         UpdateLifeBar();
@@ -102,7 +102,7 @@ public class Animal : MonoBehaviour
         }
     }
 
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
         return health;
     }

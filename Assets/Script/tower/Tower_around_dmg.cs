@@ -4,7 +4,7 @@ using UnityEngine;
 public class ZoneDamageTower : MonoBehaviour
 {
     private float damageInterval; // Temps entre chaque d�g�ts (en secondes)
-    private int damageAmount;
+    private float damageAmount;
     private float damageCooldown = 0f;
     private Tower towerScript;
 
