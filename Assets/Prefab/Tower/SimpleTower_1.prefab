@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: -1}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4050994017677585040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000017881393, y: 0.024947792}
+  m_Offset: {x: -0.0022817887, y: 0.008977234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.301463, y: 0.3180949}
+  m_Size: {x: 0.24214333, y: 0.24964917}
   m_EdgeRadius: 0
 --- !u!1 &5228035577598191003
 GameObject:
@@ -347,7 +347,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.5
 --- !u!114 &5056489862878427136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,8 +379,8 @@ MonoBehaviour:
   name: Eggxterminator
   description: Shots normal eggs but cost the less, you can buy it at the start
   description_damage: 1
-  cost: 10
-  upgrade: 0
+  cost: 3
+  upgrade: 12
   damage: 1
   rate: 1
 --- !u!1 &9045093008452415643

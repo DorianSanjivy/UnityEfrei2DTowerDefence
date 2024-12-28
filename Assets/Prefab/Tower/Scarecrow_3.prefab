@@ -66,8 +66,8 @@ MonoBehaviour:
   name: Scratchcrow3
   description: Scratches in a circular short range. It's perfect to put in corners
   description_damage: 10
-  cost: 40
-  upgrade: 0
+  cost: 32
+  upgrade: 999
   damage: 5
   rate: 1
 --- !u!58 &6979099821460625134
@@ -104,7 +104,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.01, y: 0.19}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.5
 --- !u!114 &-8424263275637054111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,8 +245,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.02, y: 0.189, z: -0.25}
-  m_LocalScale: {x: 1.3985066, y: 1.3985066, z: 1.3985066}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1244928534254092654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -334,7 +334,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009925343, y: -0.048044696}
+  m_Offset: {x: -0.00992538, y: -0.070859894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -345,7 +345,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12739556, y: 0.18335232}
+  m_Size: {x: 0.1616176, y: 0.22898272}
   m_EdgeRadius: 0
 --- !u!1 &9058300074704712176
 GameObject:

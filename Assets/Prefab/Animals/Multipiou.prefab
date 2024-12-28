@@ -103,7 +103,7 @@ MonoBehaviour:
   speed: 1.5
   health: 20
   damage: 5
-  moneyDrop: 4
+  moneyDrop: 12
   coinPrefab: {fileID: 2588204975628622341, guid: 9d8dea4611ed0384a960aa007a9cd44d, type: 3}
   dropRadius: 1
   lifeBarPrefab: {fileID: 649994158534550227, guid: 06533d223f653b34c8926444d44c5456, type: 3}
@@ -162,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009057775, y: 0.04690717}
+  m_Offset: {x: -0.009057775, y: 0.25079718}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -173,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4836844, y: 0.53195584}
+  m_Size: {x: 0.4836844, y: 0.6335502}
   m_EdgeRadius: 0
 --- !u!50 &4121474240001823990
 Rigidbody2D:
