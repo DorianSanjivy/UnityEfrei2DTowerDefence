@@ -47,8 +47,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the projectile hits the enemy
-        if (other.CompareTag("Enemy"))
+        // Check if the projectile hits its target
+        if (other.gameObject == target)
         {
             Animal enemyHealth = other.GetComponent<Animal>();
             if (enemyHealth != null)

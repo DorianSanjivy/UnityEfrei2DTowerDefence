@@ -63,13 +63,13 @@ MonoBehaviour:
       - 1.2
       - 40
       - 8
-      - 5
+      - 10
     - row:
       - VacheALT
       - 1.5
       - 70
       - 20
-      - 12
+      - 20
     - row:
       - MinipiouV2
       - 3
