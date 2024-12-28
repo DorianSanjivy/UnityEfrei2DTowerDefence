@@ -43,7 +43,7 @@ MonoBehaviour:
     - row:
       - Canon3
       - Eggxterminator3
-      - 24
+      - 48
       - 4
       - 0.25
       - Shots normal eggs but cost the less, you can buy it at the start
@@ -52,7 +52,7 @@ MonoBehaviour:
       - Barrel1
       - Bag-art
       - 5
-      - 1
+      - 0.75
       - 2
       - Throws a projectile in a long range and attacks in area of effect (AOE)
       - 2
@@ -60,18 +60,18 @@ MonoBehaviour:
       - Barrel2
       - Bag-art2
       - 20
-      - 1
-      - 1.5
+      - 0.75
+      - 0.5
       - Throws a projectile in a long range and attacks in area of effect (AOE)
-      - 4
+      - 8
     - row:
       - Barrel3
       - Bag-art3
-      - 40
-      - 1
+      - 80
+      - 0.75
       - 0.1
       - Throws a projectile in a long range and attacks in area of effect (AOE)
-      - 10
+      - 16
     - row:
       - Wind1
       - Slowmill
@@ -84,7 +84,7 @@ MonoBehaviour:
     - row:
       - Wind2
       - Slowmill2
-      - 20
+      - 32
       - 0
       - 0.55
       - Doesn't do any damage but it slows the enemies in short range, do not put
@@ -93,7 +93,7 @@ MonoBehaviour:
     - row:
       - Wind3
       - Slowmill3
-      - 40
+      - 128
       - 0
       - 0.4
       - Doesn't do any damage but it slows the enemies in short range, do not put
@@ -104,22 +104,22 @@ MonoBehaviour:
       - Scratchcrow
       - 8
       - 3
-      - 4
+      - 3
       - Scratches in a circular short range. It's perfect to put in corners
       - 3
     - row:
       - Zone2
       - Scratchcrow2
-      - 16
+      - 32
+      - 12
       - 3
-      - 1.5
       - Scratches in a circular short range. It's perfect to put in corners
-      - 5
+      - 12
     - row:
       - Zone3
       - Scratchcrow3
-      - 32
-      - 5
-      - 1.0
+      - 128
+      - 48
+      - 3
       - Scratches in a circular short range. It's perfect to put in corners
-      - 10
+      - 48
