@@ -13,10 +13,15 @@ public class ZoneDamageTower : MonoBehaviour
 
     private bool countdownActive = false; // To track if the countdown is active
 
+    //private Vector3 originalPosition; // Store the original position of the tower
+    //private float shakeIntensity = 0.5f; // Base intensity of the shake
+    //private float shakeFrequency = 10f; // Frequency of the shake
+
     void Start() { 
         towerScript = GetComponent<Tower>(); 
         damageAmount = towerScript.damage; 
         damageInterval = towerScript.rate; 
+        //originalPosition = transform.position; // Store the original position
     }
     void Update()
     {
@@ -24,6 +29,12 @@ public class ZoneDamageTower : MonoBehaviour
         if (countdownActive)
         {
             damageCooldown -= Time.deltaTime;
+
+            // Apply shaking effect
+            //float intensityMultiplier = 1 - (damageCooldown / damageInterval); // Increases as cooldown nears 0
+            //float shakeOffset = Mathf.Sin(Time.time * shakeIntensity) * shakeFrequency * intensityMultiplier;
+            //transform.position = originalPosition + new Vector3(shakeOffset, 0, 0);
+
 
             if (damageCooldown <= 0f)
             {
@@ -106,20 +117,11 @@ public class ZoneDamageTower : MonoBehaviour
     }
     private void TriggerDamageEffect()
     {
-        if (damageEffect != null)
+        // Trouver le script Rotation_bras et activer la rotation
+        Rotation_bras rotationScript = GetComponentInChildren<Rotation_bras>();
+        if (rotationScript != null)
         {
-            // Active l'effet visuel pendant une courte dur�e
-            damageEffect.SetActive(true);
-            Invoke("DisableDamageEffect", 0.5f); // D�sactive apr�s 0.5 secondes
+            rotationScript.StartRotation();
         }
     }
-
-    private void DisableDamageEffect()
-    {
-        if (damageEffect != null)
-        {
-            damageEffect.SetActive(false);
-        }
-    }
-
 }

@@ -19,7 +19,8 @@ public class AnimalAutoSetup : MonoBehaviour
         { "Vache", 6 },
         { "VacheALT", 7 },
         { "MinipiouV2", 8 },
-        { "PouletV2", 9 }
+        { "PouletV2", 9 },
+        { "VacheALT2", 10 }
     };
 
     [SerializeField]

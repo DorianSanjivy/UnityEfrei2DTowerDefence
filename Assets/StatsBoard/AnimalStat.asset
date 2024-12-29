@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AnimalStat
   m_EditorClassIdentifier: 
   array:
-    gridSize: {x: 5, y: 11}
+    gridSize: {x: 5, y: 12}
     cellSize: {x: 64, y: 16}
     cells:
     - row:
@@ -81,4 +81,10 @@ MonoBehaviour:
       - 3
       - 10
       - 10
+      - 0
+    - row:
+      - VacheALT2
+      - 3
+      - 600
+      - 33
       - 0

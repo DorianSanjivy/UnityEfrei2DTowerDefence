@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09370083, y: 0.13866442}
   m_AnchorMax: {x: 0.9363285, y: 0.31015432}
-  m_AnchoredPosition: {x: -3.5869598, y: -1.1005249}
+  m_AnchoredPosition: {x: -3.5869598, y: -1.1005859}
   m_SizeDelta: {x: 2.891899, y: 5.7815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330971311
@@ -5974,6 +5974,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1224414070}
     - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
       propertyPath: waves.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 5f60bbfc94920dc46b4c5d61835a19a6, type: 2}
@@ -5989,6 +5993,22 @@ PrefabInstance:
       propertyPath: waves.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 2d8e4a41209fde849ae403b7a0748726, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c9f6db64ad9be44b8fe639eaf9ddf36, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: ef4e2e328589d4542b6c00fd0faaae59, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c24f5d2f7763ed46b4739e311a35fc4, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 26c53d449b1b9d7419f7d97f4652cef6, type: 2}
     - target: {fileID: 1454962601838315534, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6085,6 +6105,7 @@ MonoBehaviour:
   - {fileID: 5741532354101464544, guid: b230ade4b21aec54fb7b96dbdb7919b6, type: 3}
   - {fileID: 5741532354101464544, guid: c2b2335e494e9a443aaac9b7fe80da98, type: 3}
   - {fileID: 5741532354101464544, guid: f44ca351acdf6cf4fb556310c4bacaf3, type: 3}
+  - {fileID: 5741532354101464544, guid: dfa9fe8f2c023be4daf1d62d030702fa, type: 3}
   animalStats: {fileID: 11400000, guid: b0c4a50d1ed5f0b4ab83d52894daa391, type: 2}
 --- !u!1001 &7946572909952777584
 PrefabInstance:

@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.01, y: 0.5, z: -1}
-  m_LocalScale: {x: 4.9052, y: 4.9052, z: 4.9052}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5.9999995, y: 5.9999995, z: 5.9999995}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4050994017677585040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004668087, y: 0.01561112}
+  m_Offset: {x: -0.00044463575, y: 0.0015510693}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.22365722, y: 0.24340151}
+  m_Size: {x: 0.19298077, y: 0.19483049}
   m_EdgeRadius: 0
 --- !u!1 &5228035577598191003
 GameObject:
@@ -334,7 +334,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 3
 --- !u!114 &5056489862878427136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +351,7 @@ MonoBehaviour:
   firePoint: {fileID: 642402515659118538}
   cannon: {fileID: 5882973194600772413}
   projectileSpeed: 5
+  targetSwitchCooldownDuration: 2
 --- !u!114 &3495239715476423487
 MonoBehaviour:
   m_ObjectHideFlags: 0

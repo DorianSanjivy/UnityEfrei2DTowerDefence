@@ -30,48 +30,49 @@ MonoBehaviour:
       - 4
       - 1
       - 1.0
-      - Shots normal eggs but cost the less, you can buy it at the start
+      - "Shots eggs, it\u2019s pretty cheap but shot fast. "
       - 1
     - row:
       - Canon2
       - Eggxterminator2
       - 12
       - 2
-      - 0.5
-      - Shots normal eggs but cost the less, you can buy it at the start
-      - 4
+      - 0.75
+      - "Shots bullet, it\u2019s pretty cheap but shot pretty fast. "
+      - 3
     - row:
       - Canon3
       - Eggxterminator3
       - 48
       - 4
       - 0.25
-      - Shots normal eggs but cost the less, you can buy it at the start
+      - 'Shots bullets, it shot fast and hard. '
       - 8
     - row:
       - Barrel1
       - Bag-art
       - 5
-      - 0.75
+      - 0.5
       - 2
-      - Throws a projectile in a long range and attacks in area of effect (AOE)
+      - Throws an explosive seed bag in a long range. It explode in a zone.
       - 2
     - row:
       - Barrel2
       - Bag-art2
       - 20
-      - 0.75
       - 0.5
-      - Throws a projectile in a long range and attacks in area of effect (AOE)
-      - 8
+      - 0.75
+      - Throws rapidly an explosive seed bag in a long range. It explodes in a zone.
+      - 6
     - row:
       - Barrel3
       - Bag-art3
       - 80
-      - 0.75
+      - 0.5
       - 0.1
-      - Throws a projectile in a long range and attacks in area of effect (AOE)
-      - 16
+      - Extremely fast shooting of explosive seed bags in a long range. It explodes
+        in a zone.
+      - 18
     - row:
       - Wind1
       - Slowmill
@@ -87,8 +88,8 @@ MonoBehaviour:
       - 32
       - 0
       - 0.55
-      - Doesn't do any damage but it slows the enemies in short range, do not put
-        this alone...
+      - Doesn't do any damage but it slows the enemies greatly in short range, do
+        not put this alone...
       - 0
     - row:
       - Wind3
@@ -96,7 +97,7 @@ MonoBehaviour:
       - 128
       - 0
       - 0.4
-      - Doesn't do any damage but it slows the enemies in short range, do not put
+      - Doesn't do any damage but it stops the enemies in short range, do not put
         this alone...
       - 0
     - row:
@@ -105,7 +106,7 @@ MonoBehaviour:
       - 8
       - 3
       - 3
-      - Scratches in a circular short range. It's perfect to put in corners
+      - Scratches cyclically in a circular short range. It's perfect to put in corners.
       - 3
     - row:
       - Zone2
@@ -113,7 +114,7 @@ MonoBehaviour:
       - 32
       - 12
       - 3
-      - Scratches in a circular short range. It's perfect to put in corners
+      - Scratches cyclically in a circular short range. It's deal devastating damage.
       - 12
     - row:
       - Zone3
@@ -121,5 +122,5 @@ MonoBehaviour:
       - 128
       - 48
       - 3
-      - Scratches in a circular short range. It's perfect to put in corners
+      - Scratches cyclically in a circular short range. To obliterate your enemies.
       - 48
