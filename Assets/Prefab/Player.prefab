@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6485375303632761359}
   - component: {fileID: 1321886313618747213}
   - component: {fileID: 7142187700142013689}
-  - component: {fileID: 4504751139710069101}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -76,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950087825
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3a4d920a1f2cb6d419d12bdb6fc0b2d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 504079bf839f26b42b34f8edda29449b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +123,7 @@ BoxCollider2D:
   m_Offset: {x: -0.000978589, y: 0.2298562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47157624, y: 0.18475457}
+    pivot: {x: 0.4715762, y: 0.1847546}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -162,10 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  idleSprite: {fileID: 21300000, guid: 3a4d920a1f2cb6d419d12bdb6fc0b2d1, type: 3}
+  idleSprite: {fileID: 21300000, guid: 504079bf839f26b42b34f8edda29449b, type: 3}
   walkSprites:
-  - {fileID: 21300000, guid: 5d253bb2af5e0ba4db5937c4e0323800, type: 3}
-  - {fileID: 21300000, guid: 66608abde99880748a0c0e68d06a0aa4, type: 3}
+  - {fileID: 21300000, guid: cb30ea86e68f55a47b0e95d32747e341, type: 3}
+  - {fileID: 21300000, guid: 549f2b4c9e4f2bc4e8278fc516c8c6c7, type: 3}
   animationSpeed: 0.1
 --- !u!50 &7142187700142013689
 Rigidbody2D:
@@ -194,17 +193,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4504751139710069101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432849973701796864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6aa354b7083a4f4cb93f9a52262a731, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  squashIntensity: 0.06
-  squashSpeed: 5

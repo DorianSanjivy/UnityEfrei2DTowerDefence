@@ -19,7 +19,7 @@ public class Animal : MonoBehaviour
     public GameObject lifeBarPrefab; // Prefab for the life bar
     private GameObject lifeBarInstance; // Instance of the life bar
     private Transform lifeBarForeground; // Reference to the foreground child of the life bar
-    private Vector3 lifeBarOffset = new Vector3(0, 1.5f, 0); // Offset for the life bar above the object
+    private Vector3 lifeBarOffset = new Vector3(0, 1f, 0); // Offset for the life bar above the object
 
     public GameObject[] spawnOnDeath; // Enemies to spawn when this enemy dies
 
