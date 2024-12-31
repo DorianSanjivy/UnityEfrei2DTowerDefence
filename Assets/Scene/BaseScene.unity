@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09370083, y: 0.13866442}
   m_AnchorMax: {x: 0.9363285, y: 0.31015432}
-  m_AnchoredPosition: {x: -3.5869598, y: -1.1006851}
+  m_AnchoredPosition: {x: -3.5869598, y: -1.1006927}
   m_SizeDelta: {x: 2.891899, y: 5.7815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330971311
@@ -5921,7 +5921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4705396048798295372, guid: 5678558b1229dc241ab3d98698a507b7, type: 3}
       propertyPath: isMuted
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8008805705056813673, guid: 5678558b1229dc241ab3d98698a507b7, type: 3}
       propertyPath: m_Name
@@ -5948,6 +5948,18 @@ PrefabInstance:
       propertyPath: waves.Array.size
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e85ac18e0178a04d9f4d294984a6d0b, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1436e770ca8fa894898a6c29f7ed8316, type: 2}
+    - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
+      propertyPath: waves.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 427218869f8eae9438f425c861ae3afb, type: 2}
     - target: {fileID: 522348685955782095, guid: 56de65c0e02269b499e75341e28c9232, type: 3}
       propertyPath: waves.Array.data[3]
       value: 

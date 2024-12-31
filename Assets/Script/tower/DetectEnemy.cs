@@ -15,7 +15,7 @@ public class DetectEnemy : MonoBehaviour
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private float fireCooldown = 0f;
     private float targetSwitchCooldown = 0f; // Cooldown for switching targets
-    public float targetSwitchCooldownDuration = 0.1f; // Duration of the switch cooldown
+    private float targetSwitchCooldownDuration = 3f; // Duration of the switch cooldown
 
     private Tower towerScript;
     private GameObject currentTarget; // Keep track of the current target
@@ -34,25 +34,29 @@ public class DetectEnemy : MonoBehaviour
 
         if (enemiesInRange.Count > 0)
         {
-            // Target the first enemy in range
             GameObject target = enemiesInRange[0];
 
-            // Check if target has changed
-            if (currentTarget != target)
+            // Switch targets with cooldown only if transitioning directly between targets
+            if (currentTarget != null && currentTarget != target && targetSwitchCooldown <= 0f)
             {
+                Debug.Log($"Switching target to {target.name}, resetting cooldown.");
                 currentTarget = target;
-                targetSwitchCooldown = targetSwitchCooldownDuration; // Reset switch cooldown
+                targetSwitchCooldown = targetSwitchCooldownDuration; // Reset cooldown
+            }
+            else if (currentTarget == null) // If no current target, immediately switch
+            {
+                Debug.Log($"Acquiring new target: {target.name}");
+                currentTarget = target;
             }
 
-            // Only aim and fire if switch cooldown is complete
-            if (targetSwitchCooldown <= 0f)
+            if (currentTarget != null && targetSwitchCooldown <= 0f)
             {
-                cannon.AimAt(target.transform); // Set the target in the Cannon script
+                cannon.AimAt(currentTarget.transform); // Aim at the current target
 
                 // Fire projectile if cooldown is complete
                 if (fireCooldown <= 0f)
                 {
-                    Shoot(target);
+                    Shoot(currentTarget);
                     fireCooldown = fireRate; // Reset fire cooldown
                 }
             }
@@ -62,15 +66,17 @@ public class DetectEnemy : MonoBehaviour
             // Clear the cannon's target if no enemies are in range
             cannon.AimAt(null);
             currentTarget = null; // Reset current target
+
+            // Reset cooldowns when no enemies are present
+            targetSwitchCooldown = 0f;
+            fireCooldown = 0f;
         }
 
         // Decrease cooldown timers
-        if (fireCooldown > 0f)
-            fireCooldown -= Time.deltaTime;
+        fireCooldown = Mathf.Max(0f, fireCooldown - Time.deltaTime);
+        targetSwitchCooldown = Mathf.Max(0f, targetSwitchCooldown - Time.deltaTime);
 
-        if (targetSwitchCooldown > 0f)
-            targetSwitchCooldown -= Time.deltaTime*1.75f;
-            Debug.Log(targetSwitchCooldown);
+        Debug.Log($"Target Switch Cooldown: {targetSwitchCooldown}");
     }
 
     private void Shoot(GameObject target)

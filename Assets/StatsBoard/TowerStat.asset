@@ -28,7 +28,7 @@ MonoBehaviour:
       - Canon1
       - Eggxterminator
       - 4
-      - 1
+      - 0.75
       - 1.0
       - "Shots eggs, it\u2019s pretty cheap but shot fast. "
       - 1
@@ -36,7 +36,7 @@ MonoBehaviour:
       - Canon2
       - Eggxterminator2
       - 12
-      - 2
+      - 1.5
       - 0.75
       - "Shots bullet, it\u2019s pretty cheap but shot pretty fast. "
       - 3
@@ -44,8 +44,8 @@ MonoBehaviour:
       - Canon3
       - Eggxterminator3
       - 48
-      - 4
-      - 0.25
+      - 3
+      - 0.5
       - 'Shots bullets, it shot fast and hard. '
       - 8
     - row:
